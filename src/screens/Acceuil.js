@@ -1,8 +1,5 @@
-import React from "react"; 
-
+import React from "react"
 
 export default function Acceuil() {
-  return (
-    <div>Acceuil</div>
-  )
+  return <div>Acceuil</div>
 }

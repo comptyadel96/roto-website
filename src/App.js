@@ -1,4 +1,6 @@
-import Navbar from './components/Navbar';
+import Navbar from "./components/Navbar"
+import { FiMail, FiPhone } from "react-icons/fi"
+import { ImLocation2 } from "react-icons/im"
 
 function App() {
   return (
@@ -7,11 +9,37 @@ function App() {
       <Navbar />
       {/* header */}
       <div className="flex w-[90%] mx-auto justify-evenly mb-10 bg-white">
-        <div className='bg-emerald-500 w-1/3'>
-          <p className="text-gray-800 lg:text-4xl flex flex-col items-center bg-white">Adara roto</p>
+        <div className="bg-emerald-500 w-1/3">
+          <p className="text-gray-800 lg:text-4xl flex flex-col items-center bg-white lg:py-5 border font-bold">
+            Adara roto
+          </p>
+          <div className="flex flex-col  w-full bg-gray-800 lg:py-5">
+            <div className="flex items-center my-1">
+              <FiMail className="text-white text-4xl ml-5" />
+              <p className="font-semibold text-lg text-white ml-5">
+                roto@adarasarl.com
+              </p>
+            </div>
+            <div className="flex items-center my-1">
+              <FiPhone className="text-white text-4xl ml-5" />
+              <p className="font-semibold text-lg text-white ml-5">
+                +213 560 97 52 64
+              </p>
+            </div>
+            <div className="flex items-center my-1">
+              <ImLocation2 className="text-white text-4xl ml-5" />
+              <p className="font-semibold text-lg text-white ml-5">
+                55, Cité Ben Sallah, Oued El Alleug, (W) de Blida{" "}
+              </p>
+            </div>
+          </div>
         </div>
-        <img src="/images/img-header.jpg" alt="bureau adara roto" className='max-h-[70vh]' />
-        <div className='bg-white w-1/3' />
+        <img
+          src="/images/img-header.jpg"
+          alt="bureau adara roto"
+          className="max-h-[70vh]"
+        />
+        {/* <div className='bg-white w-1/3' /> */}
       </div>
       {/* body */}
       <div className="bg-white lg:w-[70%] mx-auto p-4 flex flex-col shadow-md border mb-10 ">
@@ -35,22 +63,22 @@ function App() {
             <div className="flex mx-auto mt-5 justify-evenly">
               <div className="flex flex-col items-center">
                 <div className="w-20 h-11 rounded-full bg-gray-300" />
-                <p className='font-semibold'>Gris</p>
+                <p className="font-semibold">Gris</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-20 h-11 rounded-full bg-black" />
-                <p className='font-semibold'>Noir</p>
+                <p className="font-semibold">Noir</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-20 h-11 rounded-full bg-white shadow border" />
-                <p className='font-semibold'>Blanc</p>
+                <p className="font-semibold">Blanc</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
