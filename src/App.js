@@ -35,15 +35,16 @@ function App() {
             </div>
           </div>
         </div>
-        <img
+        {/* <img
           src="/images/citerne-blanche.jpg"
           alt="bureau adara roto"
           className="max-h-[70vh] hue-rotate-90"
-        />
-       <div className="absolute left-1/2 -translate-x-[50%] bottom-10 px-5 py-3 bg-[rgba(0,0,0,0.5)]">
+        /> */}
+        <SlideShow />
+        {/* <div className="absolute left-1/2 -translate-x-[50%] bottom-10 px-5 py-3 bg-[rgba(0,0,0,0.5)]">
         <h1 className="text-3xl text-white">Citerne Vertical <br/></h1>
         <p className="text-white text-xl">5000 Litres 3 couches Polyethylene</p>
-       </div>
+       </div> */}
       </div>
       {/* body */}
       <div className="bg-white lg:w-[70%] mx-auto p-4 flex flex-col shadow-md border mb-10">
@@ -81,7 +82,6 @@ function App() {
           </div>
         </div>
       </div>
-      <SlideShow/>
     </div>
   )
 }

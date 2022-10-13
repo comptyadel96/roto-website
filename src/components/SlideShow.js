@@ -18,7 +18,7 @@ function SlideShow() {
     )
   }
   return (
-    <div className="relative flex w-[80%] mx-auto bg-black mb-16 flex-wrap">
+    <div className="relative flex w-[80%] mx-auto  mb-16 flex-wrap">
       <div className="flex flex-col w-full">
         <img
           src={`${imgArr[currIndex].url}`}
@@ -26,29 +26,26 @@ function SlideShow() {
           className="max-h-[70vh] object-cover mx-auto "
         />
         <FiArrowLeftCircle
-          className="absolute left-5 top-1/2 translate-y-[-50%] text-white text-3xl cursor-pointer hover:-translate-x-2 transition-all duration-700"
+          className="absolute left-12 top-1/2 translate-y-[-50%] text-emerald-500 bg-white px-2 rounded-full text-5xl cursor-pointer hover:-translate-x-2 transition-all duration-700"
           onClick={handlePreviousPage}
         />
         <FiArrowRightCircle
           onClick={handleNextPage}
-          className="absolute right-5 top-1/2 translate-y-[-50%] text-white text-3xl cursor-pointer hover:translate-x-2 transition-all duration-700"
+          className="absolute right-12 top-1/2 translate-y-[-50%] text-emerald-500 bg-white px-2 rounded-full text-5xl cursor-pointer hover:translate-x-2 transition-all duration-700"
         />
-        <div className="flex items-center bg-yellow-400">
-          {imgArr
-
-            .filter((img, index) => {
-              console.log(index, currIndex)
-              return index !== currIndex
-            })
-            .map((img, index) => (
-              <img
-                key={img.id}
-                src={`${img.url}`}
-                alt=""
-                className="max-w-xs mx-1 cursor-pointer brightness-50"
-                onClick={() => setCurrentIndex(index)}
-              />
-            ))}
+        <div className="flex items-center  mt-4 justify-evenly">
+          {imgArr.map((img, index) => (
+            <img
+              key={img.id}
+              src={`${img.url}`}
+              alt=""
+              className="max-w-xs mx-1 cursor-pointer brightness-50"
+              onClick={() => {
+                setCurrentIndex(index)
+                console.log(index)
+              }}
+            />
+          ))}
         </div>
       </div>
     </div>
