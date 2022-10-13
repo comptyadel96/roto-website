@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar"
 import { FiMail, FiPhone } from "react-icons/fi"
 import { ImLocation2 } from "react-icons/im"
+import SlideShow from "./components/SlideShow"
 
 function App() {
   return (
@@ -8,12 +9,12 @@ function App() {
       {/* navbar */}
       <Navbar />
       {/* header */}
-      <div className="flex w-[90%] mx-auto justify-evenly mb-10 bg-white">
-        <div className="bg-emerald-500 w-1/3">
-          <p className="text-gray-800 lg:text-4xl flex flex-col items-center bg-white lg:py-5 border font-bold">
+      <div className="flex  mx-auto justify-evenly mb-10 bg-white relative">
+        <div className=" w-1/3 bg-gradient-to-br from-emerald-500 to-emerald-300">
+          <p className="text-gray-800 lg:text-4xl flex flex-col items-center bg-white lg:py-5 font-bold">
             Adara roto
           </p>
-          <div className="flex flex-col  w-full bg-gray-800 lg:py-5">
+          <div className="flex flex-col  w-full bg-gray-800 lg:py-5 px-3">
             <div className="flex items-center my-1">
               <FiMail className="text-white text-4xl ml-5" />
               <p className="font-semibold text-lg text-white ml-5">
@@ -35,15 +36,18 @@ function App() {
           </div>
         </div>
         <img
-          src="/images/img-header.jpg"
+          src="/images/citerne-blanche.jpg"
           alt="bureau adara roto"
-          className="max-h-[70vh]"
+          className="max-h-[70vh] hue-rotate-90"
         />
-        {/* <div className='bg-white w-1/3' /> */}
+       <div className="absolute left-1/2 -translate-x-[50%] bottom-10 px-5 py-3 bg-[rgba(0,0,0,0.5)]">
+        <h1 className="text-3xl text-white">Citerne Vertical <br/></h1>
+        <p className="text-white text-xl">5000 Litres 3 couches Polyethylene</p>
+       </div>
       </div>
       {/* body */}
-      <div className="bg-white lg:w-[70%] mx-auto p-4 flex flex-col shadow-md border mb-10 ">
-        <div className="flex">
+      <div className="bg-white lg:w-[70%] mx-auto p-4 flex flex-col shadow-md border mb-10">
+        <div className="flex relative">
           <img
             src="/images/citernes.png"
             alt="citernes adara"
@@ -77,6 +81,7 @@ function App() {
           </div>
         </div>
       </div>
+      <SlideShow/>
     </div>
   )
 }
