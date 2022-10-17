@@ -3,6 +3,7 @@ import { FiMail, FiPhone } from "react-icons/fi"
 import { ImLocation2, ImInstagram } from "react-icons/im"
 import { MdOutlineFacebook } from "react-icons/md"
 import SlideShow from "./components/SlideShow"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -90,6 +91,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }
