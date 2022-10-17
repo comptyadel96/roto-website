@@ -52,7 +52,7 @@ function App() {
           <img
             src="/images/citernes.png"
             alt="citernes adara"
-            className="lg:max-h-60 max-h-[100%] lg:bg-inherit bg-gray-200  object-cover lg:border-r-2 border-r-green-500 lg:pr-4"
+            className="lg:max-h-[20rem] max-h-[100%] lg:bg-inherit bg-gray-200  object-cover lg:border-r-2 border-r-green-500 lg:pr-4"
           />
           <div className=" lg:ml-[10%]">
             <h1 className="lg:text-4xl text-3xl  font-semibold border-b-2 border-b-green-500 pb-2 max-w-fit mb-3 ">
@@ -91,7 +91,21 @@ function App() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <div className="w-full bg-white">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.331100942432!2d2.816552515602864!3d36.57023818830957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128f0b1bbab614c9%3A0xbe107c8812ea8125!2sAdara%20sarl!5e0!3m2!1sfr!2sdz!4v1666011523280!5m2!1sfr!2sdz"
+          // width="600"
+          // height="450"
+          style={{ border: 0 }}
+          className="mx-auto my-5 lg:w-1/3 lg:h-[20rem] border-none outline-none"
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="google maps adara roto"
+        ></iframe>
+      </div>
+
+      <Footer />
     </div>
   )
 }
