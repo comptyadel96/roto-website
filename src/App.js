@@ -45,7 +45,7 @@ function App() {
       {/* header */}
       <div className="mb-10 mt-5 bg-white relative w-full">
         {/* <SlideShow /> */}
-        <Slide2/>
+        <Slide2 />
       </div>
       {/* body */}
       <div className="bg-white lg:w-full lg:py-10 mx-auto p-4 flex flex-col shadow-md border mb-10 relative">
@@ -93,7 +93,17 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-white">
+      <div className="w-full flex flex-wrap bg-white">
+        <div className="flex flex-col items-center px-3 py-1 ">
+          <h2 className="font-semibold lg:text-3xl mt-5">
+            {new Date().getFullYear() - 2014} années d'éxperience
+          </h2>
+          <p className="mt-2">
+            sarl adara a fait ses débuts en l'an 2000, grace a la qualitée de
+            ses produits <br />
+            adara roto est devenu le leader de vente de citerne en algérie
+          </p>
+        </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.331100942432!2d2.816552515602864!3d36.57023818830957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128f0b1bbab614c9%3A0xbe107c8812ea8125!2sAdara%20sarl!5e0!3m2!1sfr!2sdz!4v1666011523280!5m2!1sfr!2sdz"
           // width="600"
