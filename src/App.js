@@ -96,25 +96,24 @@ function App() {
       <div className="w-full flex flex-wrap bg-white">
         <div className="flex flex-col items-center px-3 py-1 ">
           <h2 className="font-semibold lg:text-3xl mt-5">
-            {new Date().getFullYear() - 2014} années d'éxperience
+            + {new Date().getFullYear() - 2014} années d'éxperience
           </h2>
-          <p className="mt-2">
-            sarl adara a fait ses débuts en l'an 2000, grace a la qualitée de
-            ses produits <br />
-            adara roto est devenu le leader de vente de citerne en algérie
+          <p className="mt-2 text-2xl lg:max-w-lg text-center">
+            sarl adara roto a fait ses débuts en l'an 2014, grace a la qualitée
+            de ses produits <br />
+            adara roto est devenu le leader de vente de citernes en algérie
           </p>
         </div>
+        {/* google maps adara coordinate */}
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.331100942432!2d2.816552515602864!3d36.57023818830957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128f0b1bbab614c9%3A0xbe107c8812ea8125!2sAdara%20sarl!5e0!3m2!1sfr!2sdz!4v1666011523280!5m2!1sfr!2sdz"
-          // width="600"
-          // height="450"
           style={{ border: 0 }}
           className="mx-auto my-5 lg:w-1/3 lg:h-[20rem] border-none outline-none"
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="google maps adara roto"
-        ></iframe>
+          title="google maps adara roto vente citerne algérie"
+        />
       </div>
 
       <Footer />
