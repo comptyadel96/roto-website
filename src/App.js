@@ -4,6 +4,7 @@ import { ImLocation2, ImInstagram } from "react-icons/im"
 import { MdOutlineFacebook } from "react-icons/md"
 import SlideShow from "./components/SlideShow"
 import Footer from "./components/Footer"
+import Slide2 from "./components/Slide2"
 
 function App() {
   return (
@@ -42,8 +43,9 @@ function App() {
         </div>
       </div>
       {/* header */}
-      <div className="mb-10 bg-white relative w-full">
-        <SlideShow />
+      <div className="mb-10 mt-5 bg-white relative w-full">
+        {/* <SlideShow /> */}
+        <Slide2/>
       </div>
       {/* body */}
       <div className="bg-white lg:w-full lg:py-10 mx-auto p-4 flex flex-col shadow-md border mb-10 relative">

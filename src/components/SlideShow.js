@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi"
+
+
 function SlideShow() {
   let imgArr = [
     { url: "/images/acceuil.jpg", id: "1" },
