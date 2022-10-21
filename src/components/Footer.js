@@ -5,17 +5,17 @@ import { MdOutlineFacebook } from "react-icons/md"
 import { AiOutlineTwitter, AiFillInstagram } from "react-icons/ai"
 function Footer() {
   return (
-    <div className="mt-auto w-full bg-gray-800 flex flex-wrap items-center justify-evenly py-6 lg:px-3">
+    <div className="mt-auto w-full bg-gray-100 flex flex-wrap items-center justify-evenly py-6 lg:px-3 lemonPara">
       {/* liens */}
-      <div className="flex flex-col items-start text-white">
-        <p className="text-emerald-400 text-3xl">Raccourcis</p>
-        <p className="lg:text-lg">Acceuil</p>
-        <p className="lg:text-lg">Produits</p>
-        <p className="lg:text-lg">Qui sommes nous ?</p>
-        <p className="lg:text-lg">Contactez-nous</p>
+      <div className="flex flex-col items-start text-gray-800">
+        <p className="text-black lg:text-lg">Raccourcis</p>
+        <p className="lg:text-sm my-1">Acceuil</p>
+        <p className="lg:text-sm my-1">Produits</p>
+        <p className="lg:text-sm my-1">Qui sommes nous ?</p>
+        <p className="lg:text-sm my-1">Contactez-nous</p>
       </div>
       {/* follow us */}
-      <div className="flex items-center justify-around text-white  ">
+      <div className="flex items-center justify-around text-gray-800  ">
         <div className="flex flex-col items-center mx-3">
           <MdOutlineFacebook className="text-5xl" />
           <p>Facebook</p>
@@ -31,20 +31,20 @@ function Footer() {
       </div>
       <div className="flex flex-col">
         <img
-          src="/images/roto-white.png"
+          src="/images/logo.png"
           alt="adara roto logo"
           className="max-w-[8rem]"
         />
-        <p className="text-white mt-2">
+        <p className="text-gray-800 mt-2 text-sm">
           55, Cité Ben Sallah, Oued El Alleug, (W) de Blida{" "}
         </p>
         <p className="text-gray-100">adara roto {new Date().getFullYear()} </p>
       </div>
 
-      <div className="flex flex-col text-white">
-        <p className="font-semibold text-lg">Contact</p>
-        <a href ="mailto: roto@adarasarl.com">Email: roto@adarasarl.com</a>
-        <a href="tel:6031112298">Tél: +213 560 97 52 64</a>
+      <div className="flex flex-col text-gray-800">
+        <p className=" text-lg">Contact</p>
+        <a href ="mailto: roto@adarasarl.com" className="text-sm">Email: roto@adarasarl.com</a>
+        <a href="tel:6031112298" className="text-sm">Tél: +213 560 97 52 64</a>
       </div>
     </div>
   )
