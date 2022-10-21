@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "LemonMilkBold";
+    src: local("LemonMilkBold"),
+        url("./fonts/LemonMilk/LEMONMILK-BoldItalic.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "LemonMilkMedium";
+    src: local("LemonMilkMedium"),
+        url("./fonts/LemonMilk/LEMONMILK-MediumItalic.otf") format("truetype");
+}
+
+
+.lemonTitle {
+    font-family: "LemonMilkBold";
+}
+
+.lemonPara {
+    font-family: "LemonMilkMedium";
+}
+
+.water-wave {
+    animation: wave 10s infinite;
+
+}
+
+.citerne{
+    animation: bouncy 10s infinite;
+}
+.citerne2{
+    animation: bouncy2 10s infinite;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 55%, 9% 52%, 16% 51%, 25% 52%, 33% 55%, 40% 59%, 46% 63%, 53% 66%, 61% 67%, 68% 64%, 75% 60%, 81% 58%, 87% 54%, 96% 52%, 96% 99%, 0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 61%, 8% 64%, 15% 69%, 21% 74%, 28% 78%, 35% 82%, 43% 83%, 51% 77%, 58% 72%, 65% 68%, 72% 64%, 82% 64%, 91% 63%, 98% 65%, 99% 98%, 0% 99%);
+    }
+}
+@keyframes bouncy {
+    50%{
+        transform: translateY(10px) rotate(4deg);
+    }
+   0%, 100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+@keyframes bouncy2 {
+    50%{
+        transform: translateY(10px) rotate(-6deg);
+    }
+   0%, 100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
