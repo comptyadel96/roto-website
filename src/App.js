@@ -4,8 +4,9 @@ import { ImLocation2, ImInstagram } from "react-icons/im"
 import { MdOutlineFacebook } from "react-icons/md"
 // import SlideShow from "./components/SlideShow"
 import Footer from "./components/Footer"
-
+import "./App.css"
 import "./index.css"
+import ContactUs from "./utils/ContactUs"
 function App() {
   return (
     <div className="bg-white h-full flex flex-col">
@@ -39,7 +40,7 @@ function App() {
         </div>
       </div>
       {/* header */}
-      <div className=" flex items-center flex-wrap-reverse justify-evenly mb-10 mt-5  bg-white relative w-full">
+      <div className=" flex items-center flex-wrap-reverse justify-evenly mb-10 pt-10  bg-gray-100 relative w-full">
         <div className="flex flex-col relative ">
           {/* animated bubles */}
           <div className="absolute top-1 -left-5  lg:block hidden ">
@@ -59,7 +60,7 @@ function App() {
             <button className=" lg:text-2xl mr-2 border-none px-3 py-1 rounded-md  bg-gray-700 hover:bg-black lemonPara text-white ">
               Découvrer
             </button>
-            <button className=" lg:text-2xl border-none px-3 py-1 rounded-md  bg-[#00b0ff] hover:bg-[#006ece] lemonPara text-white ">
+            <button className=" hvr-bounce-to-top lg:text-2xl border-none px-3 py-1 rounded-md   lemonPara ">
               Commander
             </button>
           </div>
@@ -68,7 +69,7 @@ function App() {
       </div>
       {/* qui somme nous */}
 
-      <div className="lg:bg-gray-100 flex  flex-wrap relative w-full lg:py-10 lg:my-24">
+      <div className=" flex lg:flex-nowrap flex-wrap  justify-evenly relative w-full lg:py-10 lg:my-24">
         <div className=" relative overflow-hidden">
           <div className="absolute top-0 bottom-0 right-0 left-1/3 lg:px-3 bg-[rgba(0,0,0,0.8)]">
             <p className="text-white  lemonPara text-center mt-10 lg:text-3xl border-b-2 pb-2">
@@ -83,39 +84,40 @@ function App() {
           <img
             src="/images/about-adara.jpg"
             alt="acceuil sarl adara"
-            className="lg:max-h-[30rem] object-cover"
+            // className="lg:max-h-[30rem] object-cover ml-2"
+            className=" xl:max-h-[35rem] max-h-fit"
           />
         </div>
 
-        <div className="lg:px-5 lg:py-3 lg:ml-16 ">
-          <h1 className="lg:text-4xl text-3xl lemonTitle   border-b-2 border-b-cyan-500 pb-2 max-w-fit mb-3 ">
+        <div className="lg:px-5 lg:py-3 lg:ml-3 flex flex-col flex-wrap bg-yellow-300 ">
+          <h1 className="xl:text-4xl text-3xl lemonTitle hvr-underline-from-center pb-2 max-w-fit xl:mb-3 ">
             Adara roto c'est quoi ?
           </h1>
-          <p className=" lemonPara max-w-2xl text-lg text-gray-800 leading-10">
+          <p className=" lemonPara xl:max-w-2xl max-w-xl xl:text-lg text-base text-gray-800 xl:leading-10 leading-7">
             Adara roto est une entreprise spécialisée dans la vente de citernes
             alimentaires en plastique , spécialement "Polyethylene"
             <br />
             toutes nos citernes ont un nombre de 3 couches:
           </p>
           {/* couches */}
-          <div className="flex mx-auto mt-5 justify-evenly lemonPara">
+          <div className="flex  xl:mt-5 justify-evenly lemonPara">
             <div className="flex flex-col items-center  p-5">
-              <p className="text-2xl text-gray-500  mb-2 rounded-lg">
+              <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">
                 Extérieur
               </p>
-              <div className="w-20 h-11 rounded-full bg-gray-300" />
+              <div className="xl:w-36 xl:h-36 w-14 h-14 skew-x-6 bg-gray-300" />
               <p className="">Gris</p>
             </div>
             <div className="flex flex-col items-center  p-5">
-              <p className="text-2xl text-gray-500  mb-2 rounded-lg">Centre</p>
-              <div className="w-20 h-11 rounded-full bg-black" />
+              <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">Centre</p>
+              <div className="xl:w-36 xl:h-36 w-14 h-14 bg-black" />
               <p className="">Noir</p>
             </div>
             <div className="flex flex-col items-center  p-5">
-              <p className="text-2xl text-gray-500  mb-2 rounded-lg">
+              <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">
                 Intérieur
               </p>
-              <div className="w-20 h-11 rounded-full bg-white shadow border" />
+              <div className="xl:w-36 xl:h-36 w-14 h-14 -skew-x-6 bg-white shadow border" />
               <p className="">Blanc</p>
             </div>
           </div>
@@ -161,39 +163,7 @@ function App() {
         </div>
       </div>
       {/*nous contacter */}
-      <div className="flex flex-col w-[90%] mx-auto lg:my-10 h-full bg-[#061511] lg:py-12">
-        <p className="lemonPara  lg:text-3xl text-center text-white">
-          Nous contacter
-        </p>
-        <div className="flex  justify-center flex-wrap lg:mt-5 h-full">
-          <div className="flex flex-col items-center h-full  w-[25%] ">
-            <input
-              className="py-2 px-4 border w-full outline-none my-2 rounded-lg"
-              type="text"
-              placeholder="Nom complet*"
-            />
-            <input
-              className="py-2 px-4 border w-full outline-none my-2 rounded-lg"
-              type="text"
-              placeholder="Numéro de téléphone*"
-            />
-            <input
-              className="py-2 px-4 border w-full outline-none my-2 rounded-lg"
-              type="text"
-              placeholder="Entreprise (optionnelle)"
-            />
-          </div>
-          <div className="w-[30%] ml-5">
-            <textarea
-              placeholder="Message*"
-              className=" w-full border py-3 px-5 rounded-lg h-full block outline-none "
-            />
-          </div>
-        </div>
-        <button className="px-3 py-2 lg:text-xl bg-[#00b0ff] hover:bg-[#006ece] rounded-lg text-white max-w-fit mx-auto my-4">
-          Envoyer
-        </button>
-      </div>
+      <ContactUs />
       {/* infos */}
       <div className="w-full flex flex-wrap bg-white">
         {/* google maps adara coordinate */}

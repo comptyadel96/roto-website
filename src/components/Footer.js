@@ -1,6 +1,4 @@
 import React from "react"
-import { FiMail, FiPhone } from "react-icons/fi"
-import { ImLocation2 } from "react-icons/im"
 import { MdOutlineFacebook } from "react-icons/md"
 import { AiOutlineTwitter, AiFillInstagram } from "react-icons/ai"
 function Footer() {
@@ -38,7 +36,7 @@ function Footer() {
         <p className="text-gray-800 mt-2 text-sm">
           55, Cité Ben Sallah, Oued El Alleug, (W) de Blida{" "}
         </p>
-        <p className="text-gray-100">adara roto {new Date().getFullYear()} </p>
+        <p className="text-sm">adara roto {new Date().getFullYear()} </p>
       </div>
 
       <div className="flex flex-col text-gray-800">
