@@ -1,8 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@1,500;1,700&display=swap');
 
-@font-face {
+/* @font-face {
     font-family: "LemonMilkBold";
     src: local("LemonMilkBold"),
         url("./fonts/LemonMilk/LEMONMILK-BoldItalic.otf") format("truetype");
@@ -22,17 +24,21 @@
 
 .lemonPara {
     font-family: "LemonMilkMedium";
-}
+} */
 
+*{
+    font-family: 'Bai Jamjuree', sans-serif;
+}
 .water-wave {
     animation: wave 10s infinite;
 
 }
 
-.citerne{
+.citerne {
     animation: bouncy 10s infinite;
 }
-.citerne2{
+
+.citerne2 {
     animation: bouncy2 10s infinite;
 }
 
@@ -47,19 +53,25 @@
         clip-path: polygon(0% 61%, 8% 64%, 15% 69%, 21% 74%, 28% 78%, 35% 82%, 43% 83%, 51% 77%, 58% 72%, 65% 68%, 72% 64%, 82% 64%, 91% 63%, 98% 65%, 99% 98%, 0% 99%);
     }
 }
+
 @keyframes bouncy {
-    50%{
+    50% {
         transform: translateY(10px) rotate(4deg);
     }
-   0%, 100%{
+
+    0%,
+    100% {
         transform: translateY(0px) rotate(0deg);
     }
 }
+
 @keyframes bouncy2 {
-    50%{
+    50% {
         transform: translateY(10px) rotate(-6deg);
     }
-   0%, 100%{
+
+    0%,
+    100% {
         transform: translateY(0px) rotate(0deg);
     }
 }

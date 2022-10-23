@@ -13,7 +13,7 @@ function App() {
       {/* navbar */}
       <Navbar />
       {/* company infos */}
-      <div className="flex items-center lemonPara w-full bg-gray-800 py-1  px-5">
+      <div className="flex items-center  w-full bg-gray-800 py-1  px-5">
         <div className="flex items-center mx-3 max-w-fit">
           <FiMail className="text-white lg:text-4xl text-xl ml-2" />
           <p className=" text-lg text-white ml-1">roto@adarasarl.com</p>
@@ -40,7 +40,7 @@ function App() {
         </div>
       </div>
       {/* header */}
-      <div className=" flex items-center flex-wrap-reverse justify-evenly mb-10 pt-10  bg-gray-100 relative w-full">
+      <div className=" flex items-center flex-wrap-reverse justify-evenly pt-10  bg-gray-100 lg:pb-10 relative w-full">
         <div className="flex flex-col relative ">
           {/* animated bubles */}
           <div className="absolute top-1 -left-5  lg:block hidden ">
@@ -49,18 +49,18 @@ function App() {
             <div className="h-3 w-3 mt-1 bg-[#00b0ff] rounded-full animate-bounce" />
             <div className="h-3 w-3 mt-1 bg-[#00b0ff] rounded-full animate-bounce" />
           </div>
-          <p className="lg:text-3xl lemonTitle">
+          <p className="lg:text-4xl ">
             Citernes <br /> qualitée premium
           </p>
-          <p className="lemonTitle text-xs text-gray-500 mt-5">
+          <p className=" text-base text-gray-500 mt-5">
             Le meilleur service de vente <br /> de citernes à eau potable
             tri-couches en Algérie
           </p>
           <div className="flex items-center  flex-wrap self-end mt-[20%]">
-            <button className=" lg:text-2xl mr-2 border-none px-3 py-1 rounded-md  bg-gray-700 hover:bg-black lemonPara text-white ">
+            <button className=" lg:text-2xl mr-2 border-none px-3 py-1 rounded-md  bg-gray-700 hover:bg-black  text-white ">
               Découvrer
             </button>
-            <button className=" hvr-bounce-to-top lg:text-2xl border-none px-3 py-1 rounded-md   lemonPara ">
+            <button className=" hvr-bounce-to-top lg:text-2xl border-none px-3 py-1 rounded-md    ">
               Commander
             </button>
           </div>
@@ -69,65 +69,46 @@ function App() {
       </div>
       {/* qui somme nous */}
 
-      <div className=" flex lg:flex-nowrap flex-wrap  justify-evenly relative w-full lg:py-10 lg:my-24">
-        <div className=" relative overflow-hidden">
-          <div className="absolute top-0 bottom-0 right-0 left-1/3 lg:px-3 bg-[rgba(0,0,0,0.8)]">
-            <p className="text-white  lemonPara text-center mt-10 lg:text-3xl border-b-2 pb-2">
-              + {new Date().getFullYear() - 2014} années d'éxperience
+      <div className="lg:px-5 lg:py-3 lg:ml-3 lg:mt-10 flex flex-col flex-wrap text-center">
+        <h1 className="xl:text-4xl text-3xl mx-auto  pb-2 max-w-fit xl:mb-3 ">
+          Adara roto c'est quoi ?
+        </h1>
+        <p className=" xl:max-w-2xl  max-w-xl xl:text-lg mx-auto text-base text-gray-500 xl:leading-10 leading-7">
+          Adara roto est une entreprise spécialisée dans la vente de citernes
+          alimentaires en plastique , spécialement "Polyethylene"
+          <br />
+          toutes nos citernes ont un nombre de 3 couches:
+        </p>
+        {/* couches */}
+        <div className="flex  xl:mt-5 justify-evenly lg:mb-10 ">
+          <div className="flex flex-col items-center  p-5">
+            <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">
+              Extérieur
             </p>
-            <p className="text-white  lemonPara leading-10 lg:mt-6 ">
-              sarl adara roto a fait ses débuts en 2014, grace a la qualitée de
-              ses produits adara roto est devenu le leader de vente de citernes
-              en algérie
-            </p>
+            <div className="xl:w-36 xl:h-36 w-14 h-14 skew-x-6 bg-gray-300" />
+            <p className="">Gris</p>
           </div>
-          <img
-            src="/images/about-adara.jpg"
-            alt="acceuil sarl adara"
-            // className="lg:max-h-[30rem] object-cover ml-2"
-            className=" xl:max-h-[35rem] max-h-fit"
-          />
-        </div>
-
-        <div className="lg:px-5 lg:py-3 lg:ml-3 flex flex-col flex-wrap bg-yellow-300 ">
-          <h1 className="xl:text-4xl text-3xl lemonTitle hvr-underline-from-center pb-2 max-w-fit xl:mb-3 ">
-            Adara roto c'est quoi ?
-          </h1>
-          <p className=" lemonPara xl:max-w-2xl max-w-xl xl:text-lg text-base text-gray-800 xl:leading-10 leading-7">
-            Adara roto est une entreprise spécialisée dans la vente de citernes
-            alimentaires en plastique , spécialement "Polyethylene"
-            <br />
-            toutes nos citernes ont un nombre de 3 couches:
-          </p>
-          {/* couches */}
-          <div className="flex  xl:mt-5 justify-evenly lemonPara">
-            <div className="flex flex-col items-center  p-5">
-              <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">
-                Extérieur
-              </p>
-              <div className="xl:w-36 xl:h-36 w-14 h-14 skew-x-6 bg-gray-300" />
-              <p className="">Gris</p>
-            </div>
-            <div className="flex flex-col items-center  p-5">
-              <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">Centre</p>
-              <div className="xl:w-36 xl:h-36 w-14 h-14 bg-black" />
-              <p className="">Noir</p>
-            </div>
-            <div className="flex flex-col items-center  p-5">
-              <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">
-                Intérieur
-              </p>
-              <div className="xl:w-36 xl:h-36 w-14 h-14 -skew-x-6 bg-white shadow border" />
-              <p className="">Blanc</p>
-            </div>
+          <div className="flex flex-col items-center  p-5">
+            <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">
+              Centre
+            </p>
+            <div className="xl:w-36 xl:h-36 w-14 h-14 bg-black" />
+            <p className="">Noir</p>
+          </div>
+          <div className="flex flex-col items-center  p-5">
+            <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">
+              Intérieur
+            </p>
+            <div className="xl:w-36 xl:h-36 w-14 h-14 -skew-x-6 bg-white shadow border" />
+            <p className="">Blanc</p>
           </div>
         </div>
       </div>
 
       {/* type de citerne */}
       <div className="flex flex-col lg:my-10 relative overflow-hidden">
-        <h3 className="lemonTitle text-center lg:text-4xl">Type de citerne</h3>
-        <div className="absolute lg:block hidden bottom-0 bg-[#84d8ff]  h-[150%] w-[200%] z-10 water-wave" />
+        <h3 className=" text-center lg:text-4xl">Types de citernes</h3>
+        <div className="absolute lg:block hidden bottom-0 bg-[#a4e2ff]  h-[150%] w-[120%] z-10 water-wave" />
 
         <div className="flex items-center flex-wrap my-5 justify-evenly  w-full ">
           <div className="lg:px-5 lg:py-2 flex flex-col items-center rounded-2xl z-20">
@@ -136,7 +117,7 @@ function App() {
               alt=""
               className="lg:max-h-[13rem] object-cover citerne"
             />
-            <p className="lemonPara text-center lg:mt-5 ">
+            <p className=" text-center lg:mt-5 ">
               citerne horizontal <br /> petit format
             </p>
           </div>
@@ -146,7 +127,7 @@ function App() {
               alt=""
               className="lg:max-h-[13rem] object-cover citerne2"
             />
-            <p className="lemonPara text-center lg:mt-5 ">
+            <p className=" text-center lg:mt-5 ">
               citerne vertical <br /> grand format
             </p>
           </div>
@@ -156,7 +137,7 @@ function App() {
               alt=""
               className="lg:max-h-[13rem] object-cover citerne"
             />
-            <p className="lemonPara text-center lg:mt-5 ">
+            <p className=" text-center lg:mt-5 ">
               citerne vertical <br /> petit format
             </p>
           </div>

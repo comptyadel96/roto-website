@@ -48,40 +48,51 @@ function ContactUs() {
     <>
       <form
         onSubmit={sendEmail}
-        className="flex flex-col w-full mx-auto lg:my-10 h-full bg-[#f5f5f5] lg:py-12 relative overflow-hidden"
+        className="flex flex-col bg-gray-100 w-full mx-auto lg:my-10 h-full  lg:py-10 relative overflow-hidden"
         ref={form}
       >
         <ToastContainer />
-        <div className="absolute lg:block hidden  -left-20 -top-24 w-80 h-80 rounded-full bg-black" />
-        <div className="absolute lg:block hidden  -right-20 -bottom-24 w-64 h-64 rounded-full bg-black" />
-        <div className="absolute lg:block hidden  -right-20 -top-24 w-40 h-40 rounded-full bg-black" />
-        <p className="lemonPara  lg:text-3xl  pb-3 border-b-2 border-black max-w-fit mx-auto">Nous contacter</p>
-        <div className="flex  justify-center flex-wrap lg:mt-5 h-full z-20">
+
+        <p className="  lg:text-3xl  pb-3 border-b-2  max-w-fit mx-auto">
+          Nous contacter
+        </p>
+        <div className="flex  justify-around flex-wrap lg:mt-5 h-full z-20">
+          <img
+            src="/images/plants.png"
+            alt="plants"
+            className="lg:block max-h-[20rem] hidden  "
+          />
+
           <div className="flex flex-col items-center h-full  w-[25%] ">
             <input
-              className="py-2 px-4 border-2 w-full outline-none my-2 border-black rounded-lg"
+              className="py-2 px-4 border w-full outline-none my-2  rounded-lg"
               type="text"
               placeholder="Nom complet*"
               name="name"
               required
             />
             <input
-              className="py-2 px-4 border-2 w-full outline-none my-2 border-black rounded-lg"
+              className="py-2 px-4 border w-full outline-none my-2  rounded-lg"
               type="email"
               placeholder="E-mail*"
               name="email"
               required
             />
             <input
-              className="py-2 px-4 border-2 w-full outline-none my-2 border-black rounded-lg"
+              className="py-2 px-4 border w-full outline-none my-2  rounded-lg"
               type={"tel"}
               placeholder="Numéro de téléphone"
               name="phoneNumber"
             />
+            <input
+              type={"submit"}
+              className=" transition-all duration-700 px-3 py-2 lg:text-xl lg:ml-[30%] bg-white cursor-pointer hover:bg-[#000000] rounded-lg hover:text-white border-black border-2 max-w-fit  my-4"
+              placeholder="Envoyer"
+            />
           </div>
           <div className="w-[30%] ml-5">
             <input
-              className="py-2 px-4 border-2 w-full outline-none my-2 border-black rounded-lg"
+              className="py-2 px-4 border w-full outline-none my-2  rounded-lg"
               type="text"
               placeholder="Sujet*"
               name="subject"
@@ -89,22 +100,14 @@ function ContactUs() {
             />
             <textarea
               placeholder="Message*"
-              className=" w-full border-2 border-black py-3 px-5 rounded-lg h-full block outline-none "
+              className=" w-full border  py-3 px-5 rounded-lg h-1/2 block outline-none "
               name="message"
               required
             />
           </div>
         </div>
-        <input
-          type={"submit"}
-          className="lemonPara transition-all duration-700 px-3 py-2 lg:text-xl lg:ml-[30%] bg-white cursor-pointer hover:bg-[#000000] rounded-lg hover:text-white border-black border-2 max-w-fit  my-4"
-          placeholder="Envoyer"
-        />
       </form>
-      <button
-        className="mt-10  px-4 py-2 rounded-xl mx-auto"
-        onClick={notify}
-      >
+      <button className="mt-10  px-4 py-2 rounded-xl mx-auto" onClick={notify}>
         Notify
       </button>
     </>
