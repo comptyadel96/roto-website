@@ -1,46 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@1,500;1,700&display=swap');
 
-/* @font-face {
-    font-family: "LemonMilkBold";
-    src: local("LemonMilkBold"),
-        url("./fonts/LemonMilk/LEMONMILK-BoldItalic.otf") format("truetype");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: "LemonMilkMedium";
-    src: local("LemonMilkMedium"),
-        url("./fonts/LemonMilk/LEMONMILK-MediumItalic.otf") format("truetype");
-}
 
 
-.lemonTitle {
-    font-family: "LemonMilkBold";
-}
-
-.lemonPara {
-    font-family: "LemonMilkMedium";
-} */
-
-*{
+* {
     font-family: 'Bai Jamjuree', sans-serif;
 }
+
 .water-wave {
-    animation: wave 10s infinite;
+    animation: wave 7s infinite;
 
 }
 
 .citerne {
-    animation: bouncy 10s infinite;
+    animation: bouncy 7s infinite;
 }
 
 .citerne2 {
-    animation: bouncy2 10s infinite;
+    animation: bouncy2 7s infinite;
 }
+
+
 
 @keyframes wave {
 

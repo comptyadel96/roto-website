@@ -48,22 +48,17 @@ function ContactUs() {
     <>
       <form
         onSubmit={sendEmail}
-        className="flex flex-col bg-gray-100 w-full mx-auto lg:my-10 h-full  lg:py-10 relative overflow-hidden"
+        className=" w-full mx-auto bg-white lg:mb-10 h-full relative overflow-visible lg:py-20"
         ref={form}
       >
         <ToastContainer />
 
-        <p className="  lg:text-3xl  pb-3 border-b-2  max-w-fit mx-auto">
-          Nous contacter
-        </p>
-        <div className="flex  justify-around flex-wrap lg:mt-5 h-full z-20">
-          <img
-            src="/images/plants.png"
-            alt="plants"
-            className="lg:block max-h-[20rem] hidden  "
-          />
+        <div className="flex justify-center  flex-wrap  h-full flex-grow  overflow-visible">
 
-          <div className="flex flex-col items-center h-full  w-[25%] ">
+          <div className="flex flex-col items-center h-full w-1/2">
+            <p className="lg:text-3xl  pb-3 border-b-2   max-w-fit mx-auto mt-10 mb-5">
+              Nous contacter
+            </p>
             <input
               className="py-2 px-4 border w-full outline-none my-2  rounded-lg"
               type="text"
@@ -83,14 +78,7 @@ function ContactUs() {
               type={"tel"}
               placeholder="Numéro de téléphone"
               name="phoneNumber"
-            />
-            <input
-              type={"submit"}
-              className=" transition-all duration-700 px-3 py-2 lg:text-xl lg:ml-[30%] bg-white cursor-pointer hover:bg-[#000000] rounded-lg hover:text-white border-black border-2 max-w-fit  my-4"
-              placeholder="Envoyer"
-            />
-          </div>
-          <div className="w-[30%] ml-5">
+            />{" "}
             <input
               className="py-2 px-4 border w-full outline-none my-2  rounded-lg"
               type="text"
@@ -103,6 +91,11 @@ function ContactUs() {
               className=" w-full border  py-3 px-5 rounded-lg h-1/2 block outline-none "
               name="message"
               required
+            />
+            <input
+              type={"submit"}
+              className=" transition-all duration-700 px-3 py-2 lg:text-xl  bg-white cursor-pointer hover:bg-[#000000] rounded-lg hover:text-white border-black border-2 max-w-fit  my-4"
+              placeholder="Envoyer"
             />
           </div>
         </div>
