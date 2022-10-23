@@ -9,7 +9,7 @@ import "./index.css"
 import ContactUs from "./utils/ContactUs"
 function App() {
   return (
-    <div className="bg-white h-full flex flex-col">
+    <div className=" h-full flex flex-col bg-white">
       {/* navbar */}
       <Navbar />
       {/* company infos */}
@@ -40,7 +40,7 @@ function App() {
         </div>
       </div>
       {/* header */}
-      <div className=" flex items-center flex-wrap-reverse justify-evenly pt-10  bg-gray-100 lg:pb-10 relative w-full">
+      <div className=" flex items-center flex-wrap-reverse justify-evenly pt-10 bg-gray-50  lg:pb-10 relative w-full">
         <div className="flex flex-col relative ">
           {/* animated bubles */}
           <div className="absolute top-1 -left-5  lg:block hidden ">
@@ -65,80 +65,73 @@ function App() {
             </button>
           </div>
         </div>
-        <img src="/images/header.png" alt="" className="lg:max-h-[30rem]" />
+        <img
+          src="/images/header.png"
+          alt=""
+          className="lg:max-h-[30rem] z-10"
+        />
       </div>
       {/* qui somme nous */}
 
-      <div className="lg:px-5 lg:py-3 lg:ml-3 lg:mt-10 flex flex-col flex-wrap text-center">
-        <h1 className="xl:text-4xl text-3xl mx-auto  pb-2 max-w-fit xl:mb-3 ">
+      <div className="flex flex-col bg-white items-center lg:py-20 z-10 ">
+        <h1 className="xl:text-5xl text-3xl font-semibold pb-2 max-w-fit lg:mb-3 ">
           Adara roto c'est quoi ?
         </h1>
-        <p className=" xl:max-w-2xl  max-w-xl xl:text-lg mx-auto text-base text-gray-500 xl:leading-10 leading-7">
+        <p className=" xl:max-w-3xl  max-w-sm xl:text-2xl   text-base  xl:leading-10 leading-7">
           Adara roto est une entreprise spécialisée dans la vente de citernes
-          alimentaires en plastique , spécialement "Polyethylene"
-          <br />
-          toutes nos citernes ont un nombre de 3 couches:
+          alimentaires en plastique , spécialement "Polyethylene", elle a fait
+          ses débuts officielement en 2014 gràce à la qualitée exeptionelle de
+          ses produits sarl adara est devenu le leader dans le domaine de vente
+          des citernes en algérie 
         </p>
-        {/* couches */}
-        <div className="flex  xl:mt-5 justify-evenly lg:mb-10 ">
-          <div className="flex flex-col items-center  p-5">
-            <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">
-              Extérieur
-            </p>
-            <div className="xl:w-36 xl:h-36 w-14 h-14 skew-x-6 bg-gray-300" />
-            <p className="">Gris</p>
-          </div>
-          <div className="flex flex-col items-center  p-5">
-            <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">
-              Centre
-            </p>
-            <div className="xl:w-36 xl:h-36 w-14 h-14 bg-black" />
-            <p className="">Noir</p>
-          </div>
-          <div className="flex flex-col items-center  p-5">
-            <p className="xl:text-2xl text-lg text-gray-500  mb-2 rounded-lg">
-              Intérieur
-            </p>
-            <div className="xl:w-36 xl:h-36 w-14 h-14 -skew-x-6 bg-white shadow border" />
-            <p className="">Blanc</p>
-          </div>
-        </div>
       </div>
 
       {/* type de citerne */}
-      <div className="flex flex-col lg:my-10 relative overflow-hidden">
-        <h3 className=" text-center lg:text-4xl">Types de citernes</h3>
-        <div className="absolute lg:block hidden bottom-0 bg-[#a4e2ff]  h-[150%] w-[120%] z-10 water-wave" />
+      <div className="flex flex-col lg:my-10 relative overflow-hidden lg:py-24 bg-gray-50 ">
+        <h3 className=" text-center lg:text-4xl lg:mb-16 font-semibold ">
+          Types de citernes
+        </h3>
+        {/* <div className="absolute lg:block hidden bottom-0 bg-[#a4e2ff]  h-[150%] w-[120%] z-10 water-wave" /> */}
 
         <div className="flex items-center flex-wrap my-5 justify-evenly  w-full ">
-          <div className="lg:px-5 lg:py-2 flex flex-col items-center rounded-2xl z-20">
+          <div className="lg:pr-5 pl-20 lg:py-2 flex lg:mx-20 bg-white shadow-md lg:w-[34%] xl:w-1/3  h-[13rem] flex-col  rounded-2xl overflow-visible lg:p-4 relative border ">
             <img
-              src="/images/horizontal-gris.png"
+              src="/images/horizontal.png"
               alt=""
-              className="lg:max-h-[13rem] object-cover citerne"
+              className="lg:max-h-[9rem] xl:max-h-[13rem] absolute lg:top-24 xl:-top-24 -left-20 object-cover citerne"
             />
-            <p className=" text-center lg:mt-5 ">
-              citerne horizontal <br /> petit format
+            <p className="lg:ml-auto font-semibold lg:mt-2 lg:text-2xl mb-5 ">
+              Horizontale petit format
             </p>
-          </div>
-          <div className="lg:px-5 lg:py-2 flex flex-col items-center rounded-2xl z-20">
-            <img
-              src="/images/vertical-xl-gris.png"
-              alt=""
-              className="lg:max-h-[13rem] object-cover citerne2"
-            />
-            <p className=" text-center lg:mt-5 ">
-              citerne vertical <br /> grand format
+            <p className="text-center  xl:max-w-[70%] ml-auto">
+              idéal pour une utilisation dans votre domicile <br/>
+              capacité de 500 à 3000 litres
             </p>
+            <p className="ml-auto text-[#403233] mt-auto font-semibold text-xl">a partir de 14500 Da</p>
           </div>
-          <div className="lg:px-5 lg:py-2 flex flex-col items-center rounded-2xl z-20">
+          <div className="lg:px-5 lg:py-2 flex lg:mx-20 bg-white shadow-md lg:w-[34%] xl:w-1/3  h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative border">
             <img
-              src="/images/vertical-s-gris.png"
+              src="/images/vertical-xl.png"
               alt=""
-              className="lg:max-h-[13rem] object-cover citerne"
+              className="lg:max-h-[13rem] absolute -top-14 -left-12 object-cover citerne2"
             />
-            <p className=" text-center lg:mt-5 ">
-              citerne vertical <br /> petit format
+            <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl mb-5">
+              Vertical grand format
+            </p>
+            <p className="text-center  xl:max-w-[70%] ml-auto">
+              Spécialement conçu pour une fréquente et a grande quantité 
+              capacité de 1000 à 30.000 litres
+            </p>
+            <p className="ml-auto text-[#403233] mt-auto font-semibold text-xl">a partir de 56000 Da</p>
+          </div>
+          <div className="lg:px-5 lg:py-2 flex lg:mx-20 bg-white shadow-md mt-20 lg:w-[34%] xl:w-1/3  h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative border ">
+            <img
+              src="/images/vertical-s.png"
+              alt=""
+              className="lg:max-h-[17rem] absolute -top-14 -left-5 object-cover citerne"
+            />
+            <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl">
+              Vertical petit format
             </p>
           </div>
         </div>
