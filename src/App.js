@@ -7,6 +7,7 @@ import Footer from "./components/Footer"
 import "./App.css"
 import "./index.css"
 import ContactUs from "./utils/ContactUs"
+import Temoignage from "./screens/Temoignage"
 function App() {
   return (
     <div className=" h-full flex flex-col bg-white">
@@ -40,7 +41,7 @@ function App() {
         </div>
       </div>
       {/* header */}
-      <div className=" flex items-center flex-wrap-reverse justify-evenly pt-10 bg-gray-50  lg:pb-10 relative w-full">
+      <div className=" flex items-center flex-wrap-reverse justify-evenly pt-10 lg:pb-10 bg-gray-50 border-b relative w-full">
         <div className="flex flex-col relative ">
           {/* animated bubles */}
           <div className="absolute top-1 -left-5  lg:block hidden ">
@@ -73,7 +74,7 @@ function App() {
       </div>
       {/* qui somme nous */}
 
-      <div className="flex flex-col bg-white items-center lg:py-20 z-10 ">
+      <div className="flex flex-col  items-center lg:py-20 z-10 ">
         <h1 className="xl:text-5xl text-3xl font-semibold pb-2 max-w-fit lg:mb-3 ">
           Adara roto c'est quoi ?
         </h1>
@@ -82,10 +83,17 @@ function App() {
           alimentaires en plastique , spécialement "Polyethylene", elle a fait
           ses débuts officielement en 2014 gràce à la qualitée exeptionelle de
           ses produits sarl adara est devenu le leader dans le domaine de vente
-          des citernes en algérie 
+          des citernes en algérie
         </p>
+        <div className="flex items-center flex-wrap mt-10">
+          <div className="border-2 border-black w-52 h-52 mx-4"></div>
+          <div className="border-2 border-black w-52 h-52 mx-4"></div>
+          <div className="border-2 border-black w-52 h-52 mx-4"></div>
+        </div>
       </div>
+      {/* temoignages clients */}
 
+      <Temoignage />
       {/* type de citerne */}
       <div className="flex flex-col lg:my-10 relative overflow-hidden lg:py-24 bg-gray-50 ">
         <h3 className=" text-center lg:text-4xl lg:mb-16 font-semibold ">
@@ -104,10 +112,12 @@ function App() {
               Horizontale petit format
             </p>
             <p className="text-center  xl:max-w-[70%] ml-auto">
-              idéal pour une utilisation dans votre domicile <br/>
-              capacité de 500 à 3000 litres
+              idéal pour une utilisation dans votre domicile <br />
+              capacité de 700 à 3000 litres
             </p>
-            <p className="ml-auto text-[#403233] mt-auto font-semibold text-xl">a partir de 14500 Da</p>
+            <p className="ml-auto text-[#403233] mt-auto font-semibold text-xl">
+              à partir de 18500 Da
+            </p>
           </div>
           <div className="lg:px-5 lg:py-2 flex lg:mx-20 bg-white shadow-md lg:w-[34%] xl:w-1/3  h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative border">
             <img
@@ -119,10 +129,12 @@ function App() {
               Vertical grand format
             </p>
             <p className="text-center  xl:max-w-[70%] ml-auto">
-              Spécialement conçu pour une fréquente et a grande quantité 
-              capacité de 1000 à 30.000 litres
+              Spécialement conçu pour une utilisation fréquente et a grande
+              quantité capacité de 5000 à 30.000 litres
             </p>
-            <p className="ml-auto text-[#403233] mt-auto font-semibold text-xl">a partir de 56000 Da</p>
+            <p className="ml-auto text-[#403233] mt-auto font-semibold text-xl">
+              à partir de 81.000 Da
+            </p>
           </div>
           <div className="lg:px-5 lg:py-2 flex lg:mx-20 bg-white shadow-md mt-20 lg:w-[34%] xl:w-1/3  h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative border ">
             <img
@@ -130,8 +142,15 @@ function App() {
               alt=""
               className="lg:max-h-[17rem] absolute -top-14 -left-5 object-cover citerne"
             />
-            <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl">
+            <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl mb-5">
               Vertical petit format
+            </p>
+            <p className="text-center xl:max-w-[70%] ml-auto">
+              Citerne polyvalente avec différente capacitée de stockage, de 500
+              à 2000 litres
+            </p>
+            <p className="ml-auto text-[#403233] mt-auto font-semibold text-xl">
+              à partir de 14500 Da
             </p>
           </div>
         </div>

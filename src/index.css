@@ -10,16 +10,16 @@
 }
 
 .water-wave {
-    animation: wave 7s infinite;
+    animation: wave 5s infinite;
 
 }
 
 .citerne {
-    animation: bouncy 7s infinite;
+    animation: bouncy 5s infinite;
 }
 
 .citerne2 {
-    animation: bouncy2 7s infinite;
+    animation: bouncy2 5s infinite;
 }
 
 
@@ -38,7 +38,7 @@
 
 @keyframes bouncy {
     50% {
-        transform: translateY(10px) rotate(4deg);
+        transform: translateY(10px) rotate(6deg);
     }
 
     0%,
