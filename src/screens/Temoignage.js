@@ -12,21 +12,21 @@ function Temoignage({
   photo = "moi.jpg",
 }) {
   return (
-    <>
-      {/* <p className="font-semibold lg:text-2xl ml-5">
+    <div className=" flex flex-col items-center w-full my-20 bg-[#f3f3f3] lg:py-10">
+      <p className="font-semibold lg:text-2xl ml-5">
         Temoignages de nos clients
-      </p> */}
+      </p>
       <Swiper
         spaceBetween={50}
         slidesPerView={3}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         modules={[Navigation, Autoplay]}
-        className="w-full  my-20 bg-[#F7EBE8] "
         navigation
         loop
+        className="w-full"
         autoplay={{
-          delay: 2500,
+          delay: 4500,
           disableOnInteraction: false,
         }}
         style={{
@@ -98,7 +98,7 @@ function Temoignage({
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   )
 }
 

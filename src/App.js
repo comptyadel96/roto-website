@@ -86,12 +86,12 @@ function App() {
             ses produits sarl adara roto est devenu le leader dans le domaine de
             la vente des citernes en algérie
           </p>
-          <div className="h-[2px] absolute -bottom-6 w-[70%] bg-[#2d4c78]" />
+          <div className="h-[1.6px] absolute -bottom-6 w-[65%] bg-[#2d4c78]" />
         </div>
 
         {/* illustration */}
         <div className="flex items-center flex-wrap mt-10 w-full justify-around lg:mt-24">
-          <div className="k px-4 mx-4 flex flex-col items-center py-3 rounded-xl">
+          <div className=" px-4 mx-4 flex flex-col items-center py-3 rounded-xl">
             <img
               src="/images/strong-citern.png"
               alt="citern adara"
@@ -103,7 +103,7 @@ function App() {
               leur robustesse
             </p>
           </div>
-          <div className="k px-4 mx-4 flex flex-col items-center pb-3 rounded-xl">
+          <div className=" px-4 mx-4 flex flex-col items-center pb-3 rounded-xl">
             <img
               src="/images/monnaie-citern.png"
               alt="citern adara"
@@ -114,7 +114,7 @@ function App() {
               Plus besoin de vous ruiner pour avoir une citerne haute gamme
             </p>
           </div>
-          <div className="k px-4 mx-4 flex flex-col items-center pb-3 rounded-xl">
+          <div className=" px-4 mx-4 flex flex-col items-center pb-3 rounded-xl">
             <img
               src="/images/star-citern.png"
               alt="citern adara"
@@ -127,9 +127,7 @@ function App() {
           </div>
         </div>
       </div>
-      {/* temoignages clients */}
 
-      <Temoignage />
       {/* type de citerne */}
       <div className="flex flex-col lg:my-10 relative overflow-hidden lg:py-24 bg-[#edf2f4] ">
         <h3 className=" text-center lg:text-4xl lg:mb-16 font-semibold ">
@@ -191,6 +189,38 @@ function App() {
           </div>
         </div>
       </div>
+      {/* 3 couches */}
+      <div className="flex flex-wrap justify-around lg:my-20">
+        <img
+          src="/images/3couches.png"
+          alt=""
+          className="xl:max-w-[30rem] lg:max-w-[25rem]"
+        />
+        <div className="flex flex-col items-center lg:ml-5 ">
+          <h2 className="font-semibold lg:text-6xl mx-auto lg:mb-10 text-[#2d4c78]">
+            3 Couches
+          </h2>
+
+          <p className="max-w-2xl text-center lg:text-3xl text-[#2d4c78] lg:mb-5">
+            <span className="lg:text-5xl font-semibold ">1- </span> la premiére
+            couche est de couleur grise avec la capacité et le logo de
+            l'entreprise
+          </p>
+          <p className="max-w-2xl text-center lg:text-3xl text-[#2d4c78] mb-5">
+            <span className="lg:text-5xl font-semibold ">2- </span> la 2iéme
+            couche est de couleur noir, elle empéche les rayons ultra-violet de
+            pénétrer la citerne
+          </p>
+          <p className="max-w-2xl text-center lg:text-3xl text-[#2d4c78]">
+            <span className="lg:text-5xl font-semibold ">3- </span> la 3iéme
+            couche est de couleur blanche, elle permet de garder la pureté du
+            liquide et de vérifier l'état de votre eau
+          </p>
+        </div>
+      </div>
+
+      {/* temoignages clients */}
+      <Temoignage />
       {/*nous contacter */}
       <ContactUs />
       {/* infos */}
