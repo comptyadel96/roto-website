@@ -14,7 +14,7 @@ function App() {
       {/* navbar */}
       <Navbar />
       {/* company infos */}
-      <div className="flex items-center  w-full bg-gray-800 py-1  px-5">
+      <div className="flex items-center  w-full bg-[#1d3557] py-1  px-5">
         <div className="flex items-center mx-3 max-w-fit">
           <FiMail className="text-white lg:text-4xl text-xl ml-2" />
           <p className=" text-lg text-white ml-1">roto@adarasarl.com</p>
@@ -41,19 +41,19 @@ function App() {
         </div>
       </div>
       {/* header */}
-      <div className=" flex items-center flex-wrap-reverse justify-evenly pt-10 lg:pb-10 bg-gray-50 border-b relative w-full">
+      <div className=" flex items-center flex-wrap-reverse justify-evenly pt-10 lg:pb-10 bg-[#edf2f4] border-b relative w-full">
         <div className="flex flex-col relative ">
           {/* animated bubles */}
           <div className="absolute top-1 -left-5  lg:block hidden ">
-            <div className="h-3 w-3 mt-1 bg-[#00b0ff] rounded-full animate-bounce" />
-            <div className="h-3 w-3 mt-1 bg-[#00b0ff] rounded-full animate-bounce" />
-            <div className="h-3 w-3 mt-1 bg-[#00b0ff] rounded-full animate-bounce" />
-            <div className="h-3 w-3 mt-1 bg-[#00b0ff] rounded-full animate-bounce" />
+            <div className="h-3 w-3 mt-1 bg-[#1d3557] rounded-full animate-bounce" />
+            <div className="h-3 w-3 mt-1 bg-[#1d3557] rounded-full animate-bounce" />
+            <div className="h-3 w-3 mt-1 bg-[#1d3557] rounded-full animate-bounce" />
+            <div className="h-3 w-3 mt-1 bg-[#1d3557] rounded-full animate-bounce" />
           </div>
           <p className="lg:text-4xl ">
             Citernes <br /> qualitée premium
           </p>
-          <p className=" text-base text-gray-500 mt-5">
+          <p className=" text-xl text-[#2d4c78] mt-5">
             Le meilleur service de vente <br /> de citernes à eau potable
             tri-couches en Algérie
           </p>
@@ -75,27 +75,63 @@ function App() {
       {/* qui somme nous */}
 
       <div className="flex flex-col  items-center lg:py-20 z-10 ">
-        <h1 className="xl:text-5xl text-3xl font-semibold pb-2 max-w-fit lg:mb-3 ">
-          Adara roto c'est quoi ?
-        </h1>
-        <p className=" xl:max-w-3xl  max-w-sm xl:text-2xl   text-base  xl:leading-10 leading-7">
-          Adara roto est une entreprise spécialisée dans la vente de citernes
-          alimentaires en plastique , spécialement "Polyethylene", elle a fait
-          ses débuts officielement en 2014 gràce à la qualitée exeptionelle de
-          ses produits sarl adara est devenu le leader dans le domaine de vente
-          des citernes en algérie
-        </p>
-        <div className="flex items-center flex-wrap mt-10">
-          <div className="border-2 border-black w-52 h-52 mx-4"></div>
-          <div className="border-2 border-black w-52 h-52 mx-4"></div>
-          <div className="border-2 border-black w-52 h-52 mx-4"></div>
+        <div className="flex flex-col items-center relative">
+          <h1 className="xl:text-5xl text-3xl font-semibold pb-2 max-w-fit lg:mb-3 ">
+            Adara roto c'est quoi ?
+          </h1>
+          <p className=" xl:max-w-6xl  max-w-sm xl:text-2xl  text-[#2d4c78] text-base text-center  xl:leading-10 leading-7">
+            Adara roto est une entreprise spécialisée dans la vente de citernes
+            alimentaires en plastique , spécialement "Polyethylene", elle a fait
+            ses débuts officielement en 2014 gràce à la qualitée exeptionelle de
+            ses produits sarl adara roto est devenu le leader dans le domaine de
+            la vente des citernes en algérie
+          </p>
+          <div className="h-[2px] absolute -bottom-6 w-[70%] bg-[#2d4c78]" />
+        </div>
+
+        {/* illustration */}
+        <div className="flex items-center flex-wrap mt-10 w-full justify-around lg:mt-24">
+          <div className="k px-4 mx-4 flex flex-col items-center py-3 rounded-xl">
+            <img
+              src="/images/strong-citern.png"
+              alt="citern adara"
+              className="object-cover lg:max-h-[12rem] "
+            />
+            <p className="font-semibold text-lg mt-3">C'est costaud !</p>
+            <p className="text-[#2d4c78] max-w-[290px] text-center">
+              Nos citérnes se démarquent par leurs qualitées mais aussi pour
+              leur robustesse
+            </p>
+          </div>
+          <div className="k px-4 mx-4 flex flex-col items-center pb-3 rounded-xl">
+            <img
+              src="/images/monnaie-citern.png"
+              alt="citern adara"
+              className="object-cover lg:max-h-[14rem] "
+            />
+            <p className="font-semibold text-lg mt-3">Qualité/prix </p>
+            <p className="text-[#2d4c78] max-w-[270px] text-center">
+              Plus besoin de vous ruiner pour avoir une citerne haute gamme
+            </p>
+          </div>
+          <div className="k px-4 mx-4 flex flex-col items-center pb-3 rounded-xl">
+            <img
+              src="/images/star-citern.png"
+              alt="citern adara"
+              className="object-cover lg:max-h-[12rem] "
+            />
+            <p className="font-semibold text-lg mt-3">Satisfaction</p>
+            <p className="text-[#2d4c78] max-w-[270px] text-center">
+              La quantité c'est bien, la qualitée c'est encore mieux
+            </p>
+          </div>
         </div>
       </div>
       {/* temoignages clients */}
 
       <Temoignage />
       {/* type de citerne */}
-      <div className="flex flex-col lg:my-10 relative overflow-hidden lg:py-24 bg-gray-50 ">
+      <div className="flex flex-col lg:my-10 relative overflow-hidden lg:py-24 bg-[#edf2f4] ">
         <h3 className=" text-center lg:text-4xl lg:mb-16 font-semibold ">
           Types de citernes
         </h3>
@@ -115,7 +151,7 @@ function App() {
               idéal pour une utilisation dans votre domicile <br />
               capacité de 700 à 3000 litres
             </p>
-            <p className="ml-auto text-[#403233] mt-auto font-semibold text-xl">
+            <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
               à partir de 18500 Da
             </p>
           </div>
@@ -132,7 +168,7 @@ function App() {
               Spécialement conçu pour une utilisation fréquente et a grande
               quantité capacité de 5000 à 30.000 litres
             </p>
-            <p className="ml-auto text-[#403233] mt-auto font-semibold text-xl">
+            <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
               à partir de 81.000 Da
             </p>
           </div>
@@ -149,7 +185,7 @@ function App() {
               Citerne polyvalente avec différente capacitée de stockage, de 500
               à 2000 litres
             </p>
-            <p className="ml-auto text-[#403233] mt-auto font-semibold text-xl">
+            <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
               à partir de 14500 Da
             </p>
           </div>

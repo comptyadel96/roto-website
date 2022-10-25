@@ -9,19 +9,19 @@ function Navbar() {
           className="lg:max-h-24 max-h-16"
           alt="adara-roto-logo"
         />
-        <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 font-semibold">
+        <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 ">
           Acceuil
         </p>
-        <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 font-semibold">
+        <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 ">
           Produits
         </p>
-        <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 font-semibold">
+        <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 ">
           Qui sommes-nous
         </p>
-        <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 font-semibold">
+        <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 ">
           Contactez-nous
         </p>
-        <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 font-semibold">
+        <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 ">
           Fr/Ar
         </p>
       </div>

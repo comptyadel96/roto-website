@@ -22,7 +22,7 @@ function Temoignage({
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         modules={[Navigation, Autoplay]}
-        className="w-full  my-20"
+        className="w-full  my-20 bg-[#F7EBE8] "
         navigation
         loop
         autoplay={{
