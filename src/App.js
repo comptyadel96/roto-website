@@ -136,7 +136,8 @@ function App() {
         {/* <div className="absolute lg:block hidden bottom-0 bg-[#a4e2ff]  h-[150%] w-[120%] z-10 water-wave" /> */}
 
         <div className="flex items-center flex-wrap my-5 justify-evenly  w-full ">
-          <div className="lg:pr-5 pl-20 lg:py-2 flex lg:mx-20 bg-white shadow-md lg:w-[34%] xl:w-1/3  h-[13rem] flex-col  rounded-2xl overflow-visible lg:p-4 relative border ">
+          <div className="lg:pr-5 pl-20 lg:py-2 flex lg:mx-20 bg-white shadow-md lg:w-[34%] xl:w-1/3   h-[13rem] flex-col  rounded-2xl overflow-visible lg:p-4 relative border ">
+            <div className="xl:block hidden absolute -bottom-10 -left-10 h-16 w-16 rounded-full bg-black  " />
             <img
               src="/images/horizontal.png"
               alt=""
@@ -145,24 +146,24 @@ function App() {
             <p className="lg:ml-auto font-semibold lg:mt-2 lg:text-2xl mb-5 ">
               Horizontale petit format
             </p>
-            <p className="text-center  xl:max-w-[70%] ml-auto">
+            <p className="text-center  xl:max-w-[70%] lg:max-w-[75%]  ml-auto">
               idéal pour une utilisation dans votre domicile <br />
               capacité de 700 à 3000 litres
             </p>
             <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
-              à partir de 18500 Da
+              à partir de 18.500 Da
             </p>
           </div>
           <div className="lg:px-5 lg:py-2 flex lg:mx-20 bg-white shadow-md lg:w-[34%] xl:w-1/3  h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative border">
             <img
               src="/images/vertical-xl.png"
               alt=""
-              className="lg:max-h-[13rem] absolute -top-14 -left-12 object-cover citerne2"
+              className="lg:max-h-[13rem] absolute -top-14 xl:-left-12 lg:-left-16 object-cover citerne2"
             />
             <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl mb-5">
               Vertical grand format
             </p>
-            <p className="text-center  xl:max-w-[70%] ml-auto">
+            <p className="text-center  xl:max-w-[70%] lg:max-w-[74%] ml-auto">
               Spécialement conçu pour une utilisation fréquente et a grande
               quantité capacité de 5000 à 30.000 litres
             </p>
@@ -179,12 +180,12 @@ function App() {
             <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl mb-5">
               Vertical petit format
             </p>
-            <p className="text-center xl:max-w-[70%] ml-auto">
+            <p className="text-center xl:max-w-[70%] lg:max-w-[80%] ml-auto">
               Citerne polyvalente avec différente capacitée de stockage, de 500
               à 2000 litres
             </p>
             <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
-              à partir de 14500 Da
+              à partir de 14.500 Da
             </p>
           </div>
         </div>
@@ -196,26 +197,24 @@ function App() {
           alt=""
           className="xl:max-w-[30rem] lg:max-w-[25rem]"
         />
-        <div className="flex flex-col items-center lg:ml-5 ">
-          <h2 className="font-semibold lg:text-6xl mx-auto lg:mb-10 text-[#2d4c78]">
+        <div className="flex flex-col items-center lg:ml-5">
+          <h2 className="font-semibold lg:text-5xl mx-auto lg:mb-10 text-[#2d4c78]">
             3 Couches
           </h2>
-
-          <p className="max-w-2xl text-center lg:text-3xl text-[#2d4c78] lg:mb-5">
-            <span className="lg:text-5xl font-semibold ">1- </span> la premiére
-            couche est de couleur grise avec la capacité et le logo de
-            l'entreprise
-          </p>
-          <p className="max-w-2xl text-center lg:text-3xl text-[#2d4c78] mb-5">
-            <span className="lg:text-5xl font-semibold ">2- </span> la 2iéme
-            couche est de couleur noir, elle empéche les rayons ultra-violet de
-            pénétrer la citerne
-          </p>
-          <p className="max-w-2xl text-center lg:text-3xl text-[#2d4c78]">
-            <span className="lg:text-5xl font-semibold ">3- </span> la 3iéme
-            couche est de couleur blanche, elle permet de garder la pureté du
-            liquide et de vérifier l'état de votre eau
-          </p>
+          <ul className="list-disc">
+            <li className="max-w-2xl text-center lg:text-xl text-[#2d4c78] lg:mb-5">
+              la premiére couche est de couleur grise avec la capacité et le
+              logo de l'entreprise
+            </li>
+            <li className="max-w-2xl text-center lg:text-xl text-[#2d4c78] mb-5">
+              la 2iéme couche est de couleur noir, elle empéche les rayons
+              ultra-violet de pénétrer la citerne
+            </li>
+            <li className="max-w-2xl text-center lg:text-xl text-[#2d4c78]">
+              la 3iéme couche est de couleur blanche, elle permet de garder la
+              pureté du liquide et de vérifier l'état de votre eau
+            </li>
+          </ul>
         </div>
       </div>
 
