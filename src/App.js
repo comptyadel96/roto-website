@@ -8,13 +8,16 @@ import "./App.css"
 import "./index.css"
 import ContactUs from "./utils/ContactUs"
 import Temoignage from "./screens/Temoignage"
+import { motion } from "framer-motion"
+import TypeEffect from "./components/TypeEffect"
+import "./index.css"
 function App() {
   return (
-    <div className=" h-full flex flex-col bg-white">
+    <div className=" h-full flex flex-col bg-white overflow-hidden">
       {/* navbar */}
       <Navbar />
       {/* company infos */}
-      <div className="flex items-center  w-full bg-[#1d3557] py-1  px-5">
+      <div className="lg:flex hidden items-center  w-full bg-[#1d3557] py-1  px-5">
         <div className="flex items-center mx-3 max-w-fit">
           <FiMail className="text-white lg:text-4xl text-xl ml-2" />
           <p className=" text-lg text-white ml-1">roto@adarasarl.com</p>
@@ -40,9 +43,13 @@ function App() {
           <ImInstagram className="text-white text-3xl mx-6 cursor-pointer " />
         </div>
       </div>
+
       {/* header */}
-      <div className=" flex items-center flex-wrap-reverse justify-evenly pt-10 lg:pb-10 bg-[#edf2f4] border-b relative w-full">
-        <div className="flex flex-col relative ">
+      <div
+        id="grad"
+        className=" flex items-center flex-wrap-reverse justify-evenly pt-10 lg:pb-10 pb-5 mb-5 bg-[#edf2f4]  border-b relative w-full"
+      >
+        <div className="flex flex-col relative lg:items-start items-center ">
           {/* animated bubles */}
           <div className="absolute top-1 -left-5  lg:block hidden ">
             <div className="h-3 w-3 mt-1 bg-[#1d3557] rounded-full animate-bounce" />
@@ -50,14 +57,13 @@ function App() {
             <div className="h-3 w-3 mt-1 bg-[#1d3557] rounded-full animate-bounce" />
             <div className="h-3 w-3 mt-1 bg-[#1d3557] rounded-full animate-bounce" />
           </div>
-          <p className="lg:text-4xl ">
-            Citernes <br /> qualitée premium
-          </p>
-          <p className=" text-xl text-[#2d4c78] mt-5">
+
+          <TypeEffect />
+          <p className=" text-xl text-[#2d4c78] lg:mt-5 mt-2 lg:max-w-[100%] max-w-md text-center ">
             Le meilleur service de vente <br /> de citernes à eau potable
             tri-couches en Algérie
           </p>
-          <div className="flex items-center  flex-wrap self-end mt-[20%]">
+          <div className="flex items-center  flex-wrap lg:self-end self-center lg:mt-[20%] mt-4">
             <button className=" lg:text-2xl mr-2 border-none px-3 py-1 rounded-md  bg-gray-700 hover:bg-black  text-white ">
               Découvrer
             </button>
@@ -79,57 +85,77 @@ function App() {
           <h1 className="xl:text-5xl text-3xl font-semibold pb-2 max-w-fit lg:mb-3 ">
             Adara roto c'est quoi ?
           </h1>
-          <p className=" xl:max-w-6xl  max-w-sm xl:text-2xl  text-[#2d4c78] text-base text-center  xl:leading-10 leading-7">
+          <p className=" xl:max-w-6xl  max-w-sm xl:text-2xl   text-base text-center  xl:leading-[3rem] leading-7">
             Adara roto est une entreprise spécialisée dans la vente de citernes
             alimentaires en plastique , spécialement "Polyethylene", elle a fait
-            ses débuts officielement en 2014 gràce à la qualitée exeptionelle de
-            ses produits sarl adara roto est devenu le leader dans le domaine de
-            la vente des citernes en algérie
+            ses débuts officielement en 2014 grâce à la qualité exceptionnelle
+            de ses produits sarl adara roto est devenu le leader dans le domaine
+            de la vente des citernes en algérie
           </p>
-          <div className="h-[1.6px] absolute -bottom-6 w-[65%] bg-[#2d4c78]" />
+          {/* <div className="h-[1.6px] absolute -bottom-6 w-[65%] bg-[#2d4c78]" /> */}
         </div>
 
         {/* illustration */}
-        <div className="flex items-center flex-wrap mt-10 w-full justify-around lg:mt-24">
-          <div className=" px-4 mx-4 flex flex-col items-center py-3 rounded-xl">
+        <motion.div
+          initial={{ x: 500, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          viewport={{ once: true }}
+          className="flex items-center flex-wrap mt-10 w-full justify-around lg:mt-24"
+        >
+          <div className="shadow-md border lg:my-2 px-4 mx-4 flex lg:flex-row lg:flex-wrap flex-col items-center py-3 rounded-xl">
             <img
               src="/images/strong-citern.png"
               alt="citern adara"
-              className="object-cover lg:max-h-[12rem] "
+              className="object-cover lg:max-h-[10rem] "
             />
-            <p className="font-semibold text-lg mt-3">C'est costaud !</p>
-            <p className="text-[#2d4c78] max-w-[290px] text-center">
-              Nos citérnes se démarquent par leurs qualitées mais aussi pour
-              leur robustesse
-            </p>
+            <div className=" flex flex-col items-center lg:ml-3">
+              <p className="font-semibold text-xl lg:mb-3 ">C'est costaud !</p>
+              <p className="max-w-[290px] text-center text-gray-500">
+                Nos citérnes se démarquent par leur qualité mais aussi pour leur
+                robustesse
+              </p>
+            </div>
           </div>
-          <div className=" px-4 mx-4 flex flex-col items-center pb-3 rounded-xl">
+          <div className="shadow-md border lg:my-2 px-4 mx-4 flex lg:flex-row lg:flex-wrap flex-col items-center pb-3 rounded-xl">
             <img
               src="/images/monnaie-citern.png"
               alt="citern adara"
-              className="object-cover lg:max-h-[14rem] "
+              className="object-cover lg:max-h-[12rem] "
             />
-            <p className="font-semibold text-lg mt-3">Qualité/prix </p>
-            <p className="text-[#2d4c78] max-w-[270px] text-center">
-              Plus besoin de vous ruiner pour avoir une citerne haute gamme
-            </p>
+            <div className=" flex flex-col items-center lg:ml-3">
+              <p className="font-semibold text-xl lg:mb-3 ">Qualité/prix </p>
+              <p className="max-w-[270px] text-center text-gray-500">
+                Plus besoin de vous ruiner pour avoir une citerne haute gamme
+              </p>
+            </div>
           </div>
-          <div className=" px-4 mx-4 flex flex-col items-center pb-3 rounded-xl">
+          <div className="shadow-md border lg:pt-2 lg:my-2 px-4 mx-4 flex lg:flex-row lg:flex-wrap flex-col items-center pb-3 rounded-xl">
             <img
               src="/images/star-citern.png"
               alt="citern adara"
-              className="object-cover lg:max-h-[12rem] "
+              className="object-cover lg:max-h-[10rem] "
             />
-            <p className="font-semibold text-lg mt-3">Satisfaction</p>
-            <p className="text-[#2d4c78] max-w-[270px] text-center">
-              La quantité c'est bien, la qualitée c'est encore mieux
-            </p>
+            <div className=" flex flex-col items-center lg:ml-3">
+              <p className="font-semibold text-xl lg:mb-3 ">Satisfaction</p>
+              <p className="max-w-[270px] text-center text-gray-500">
+                La quantité c'est bien, la qualitée c'est encore mieux
+              </p>
+            </div>
           </div>
-        </div>
+        </motion.div>
+        <p className="lg:mt-10 lg:text-xl">Et bien plus encore...</p>
       </div>
 
       {/* type de citerne */}
-      <div className="flex flex-col lg:my-10 relative overflow-hidden lg:py-24 bg-[#edf2f4] ">
+      <motion.div
+        initial={{ x: 500, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.8, duration: 1 }}
+        viewport={{ once: true }}
+        id="grad"
+        className="flex flex-col lg:my-10 relative overflow-hidden lg:py-24 bg-[#edf2f4] "
+      >
         <h3 className=" text-center lg:text-4xl lg:mb-16 font-semibold ">
           Types de citernes
         </h3>
@@ -137,7 +163,6 @@ function App() {
 
         <div className="flex items-center flex-wrap my-5 justify-evenly  w-full ">
           <div className="lg:pr-5 pl-20 lg:py-2 flex lg:mx-20 bg-white shadow-md lg:w-[34%] xl:w-1/3   h-[13rem] flex-col  rounded-2xl overflow-visible lg:p-4 relative border ">
-            <div className="xl:block hidden absolute -bottom-10 -left-10 h-16 w-16 rounded-full bg-black  " />
             <img
               src="/images/horizontal.png"
               alt=""
@@ -189,32 +214,41 @@ function App() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* 3 couches */}
-      <div className="flex flex-wrap justify-around lg:my-20">
+      <div className="flex flex-wrap justify-around lg:my-20 relative">
         <img
           src="/images/3couches.png"
           alt=""
           className="xl:max-w-[30rem] lg:max-w-[25rem]"
         />
-        <div className="flex flex-col items-center lg:ml-5">
-          <h2 className="font-semibold lg:text-5xl mx-auto lg:mb-10 text-[#2d4c78]">
+
+        <div className="flex flex-col items-center lg:ml-5 relative content">
+          <h2 className="font-bold lg:text-5xl absolute lg:right-[25%]  lg:-top-16">
+            3 Couches
+          </h2>
+          <h2 className="font-bold lg:text-5xl absolute lg:right-[25%]  lg:-top-16 ">
             3 Couches
           </h2>
           <ul className="list-disc">
             <li className="max-w-2xl text-center lg:text-xl text-[#2d4c78] lg:mb-5">
-              la premiére couche est de couleur grise avec la capacité et le
-              logo de l'entreprise
+              la premiére couche est de couleur grise avec la capacité de
+              stockage et le logo de l'entreprise
             </li>
             <li className="max-w-2xl text-center lg:text-xl text-[#2d4c78] mb-5">
-              la 2iéme couche est de couleur noir, elle empéche les rayons
-              ultra-violet de pénétrer la citerne
+              la 2iéme couche est de couleur noir, elle empêche les rayons
+              ultraviolets de pénétrer la citerne
             </li>
             <li className="max-w-2xl text-center lg:text-xl text-[#2d4c78]">
               la 3iéme couche est de couleur blanche, elle permet de garder la
               pureté du liquide et de vérifier l'état de votre eau
             </li>
           </ul>
+          <p className="border border-[#2d4c78] rounded-lg lg:px-4 lg:py-2 lg:mt-10 lg:max-w-xl text-gray-500">
+            <span className="font-semibold text-[#2d4c78]">Important: </span>
+            Toutes nos citernes ont seulement un nombre de 3 couches, adara roto
+            ne produit pas un nombre supérieur ou inferieur à ce nombre
+          </p>
         </div>
       </div>
 

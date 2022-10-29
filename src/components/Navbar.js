@@ -16,7 +16,7 @@ function Navbar() {
           Produits
         </p>
         <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 ">
-          Qui sommes-nous
+          À propos
         </p>
         <p className=" text-xl cursor-pointer hvr-underline-from-center pb-2 ">
           Contactez-nous

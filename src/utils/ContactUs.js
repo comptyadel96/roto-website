@@ -2,7 +2,8 @@ import React, { useRef } from "react"
 import emailjs from "@emailjs/browser"
 import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
-
+import { FiMail, FiPhone } from "react-icons/fi"
+import { ImLocation2, ImInstagram, ImClock } from "react-icons/im"
 function ContactUs() {
   const form = useRef()
   const sendEmail = (e) => {
@@ -48,13 +49,30 @@ function ContactUs() {
     <>
       <form
         onSubmit={sendEmail}
-        className=" w-full mx-auto bg-white lg:mb-10 h-full relative overflow-visible lg:py-20"
+        className="w-full mx-auto bg-white lg:mb-10 h-full relative overflow-visible lg:py-20"
         ref={form}
       >
         <ToastContainer />
 
-        <div className="flex justify-center  flex-wrap  h-full flex-grow  overflow-visible">
-
+        <div className="flex justify-around items-center flex-wrap  h-full flex-grow  overflow-visible">
+          <div className="flex flex-col  justify-around border lg:py-5 lg:px-4">
+            <p className="inline-flex items-center lg:my-2">
+              <FiMail className="mr-2 text-3xl" /> roto@adarasarl.com
+            </p>
+            <p className="inline-flex items-center lg:my-2">
+              <FiPhone className="mr-2 text-3xl" />
+              +213 560 97 52 64
+            </p>
+            <p className="inline-flex items-center lg:my-2">
+              <ImLocation2 className="mr-2 text-3xl" /> 55, Cité Ben Sallah,
+              Oued El Alleug, (W) de Blida
+            </p>
+            <p className="inline-flex items-center lg:my-2">
+              <ImClock className="mr-2 text-3xl"/>
+              Heure d'ouverture <br />
+              Du dimanche au jeudi de 8:00 heure à 16:30
+            </p>
+          </div>
           <div className="flex flex-col items-center h-full w-1/2">
             <p className="lg:text-3xl  pb-3 border-b-2   max-w-fit mx-auto mt-10 mb-5">
               Nous contacter
@@ -94,7 +112,7 @@ function ContactUs() {
             />
             <input
               type={"submit"}
-              className=" transition-all duration-700 px-3 py-2 lg:text-xl  bg-white cursor-pointer hover:bg-[#000000] rounded-lg hover:text-white border-black border-2 max-w-fit  my-4"
+              className=" transition-all duration-700 px-3 py-2 lg:text-xl text-[#2d4c78] font-semibold  bg-white cursor-pointer hover:bg-[#2d4c78] rounded-lg hover:text-white border-[#2d4c78] border-2 max-w-fit  my-4"
               placeholder="Envoyer"
             />
           </div>

@@ -10,7 +10,7 @@
 }
 
 .water-wave {
-    animation: wave 5s infinite;
+    animation: wave 2s infinite;
 
 }
 
@@ -22,17 +22,33 @@
     animation: bouncy2 5s infinite;
 }
 
+#grad {
+    background-image: radial-gradient(rgb(255, 255, 255) 15%, #edf2f4 75%);
+}
 
+.content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #2d4c78;
+}
+
+.content h2:nth-child(2) {
+    color: #2d4c78;
+
+    animation: wave 6s ease-in-out infinite;
+
+}
 
 @keyframes wave {
 
     0%,
     100% {
-        clip-path: polygon(0% 55%, 9% 52%, 16% 51%, 25% 52%, 33% 55%, 40% 59%, 46% 63%, 53% 66%, 61% 67%, 68% 64%, 75% 60%, 81% 58%, 87% 54%, 96% 52%, 96% 99%, 0% 100%);
+        clip-path: polygon(0% 47%, 11% 33%, 25% 25%, 40% 24%, 53% 27%, 57% 32%, 66% 38%, 76% 34%, 86% 29%, 100% 24%, 100% 100%, 0% 100%);
     }
 
+    
+
     50% {
-        clip-path: polygon(0% 61%, 8% 64%, 15% 69%, 21% 74%, 28% 78%, 35% 82%, 43% 83%, 51% 77%, 58% 72%, 65% 68%, 72% 64%, 82% 64%, 91% 63%, 98% 65%, 99% 98%, 0% 99%);
+        clip-path: polygon(0% 47%, 15% 51%, 29% 58%, 41% 66%, 50% 74%, 60% 76%, 65% 61%, 75% 52%, 90% 57%, 100% 68%, 100% 100%, 0% 100%);
     }
 }
 
