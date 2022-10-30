@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react"
+import { useTranslation } from "react-i18next"
 
 function TypeEffect() {
+  const { t } = useTranslation()
   const textRef = useRef(null)
-  const string = "citernes qualité premium"
+  const string = t("headerTitle") 
 
   let [newText, setNewText] = useState("")
   let index = 0
@@ -23,7 +25,7 @@ function TypeEffect() {
     return () => {
       clearInterval(timer)
     }
-  }, [index])
+  }, [index,string])
   return (
     <p ref={textRef} className="lg:text-4xl text-2xl">
       {newText}

@@ -1,7 +1,7 @@
 import { FiMail, FiPhone } from "react-icons/fi"
 import { ImLocation2, ImInstagram } from "react-icons/im"
 import { MdOutlineFacebook } from "react-icons/md"
-
+import { useTranslation } from "react-i18next"
 import "../App.css"
 import "../index.css"
 import ContactUs from "../utils/ContactUs"
@@ -10,6 +10,7 @@ import { motion } from "framer-motion"
 import TypeEffect from "../components/TypeEffect"
 
 function Acceuil() {
+  const { t } = useTranslation()
   return (
     <div className=" h-full flex flex-col bg-white overflow-hidden lg:pt-20">
       {/* company infos */}
@@ -56,15 +57,14 @@ function Acceuil() {
 
           <TypeEffect />
           <p className=" text-xl text-[#2d4c78] lg:mt-5 mt-2 lg:max-w-[100%] max-w-md text-center ">
-            Le meilleur service de vente <br /> de citernes à eau potable
-            tri-couches en Algérie
+            {t("headerSub")}
           </p>
           <div className="flex items-center  flex-wrap lg:self-end self-center lg:mt-[20%] mt-4">
             <button className=" lg:text-2xl mr-2 border-none px-3 py-1 rounded-md  bg-gray-700 hover:bg-black  text-white ">
-              Découvrer
+             {t("découvrer")}
             </button>
             <button className=" hvr-bounce-to-top lg:text-2xl border-none px-3 py-1 rounded-md    ">
-              Commander
+             {t("commander")}
             </button>
           </div>
         </div>
@@ -79,14 +79,10 @@ function Acceuil() {
       <div className="flex flex-col  items-center lg:py-20 z-10 ">
         <div className="flex flex-col items-center relative">
           <h1 className="xl:text-5xl text-3xl font-semibold pb-2 max-w-fit lg:mb-3 ">
-            Adara roto c'est quoi ?
+            {t("adaraCquoi")}
           </h1>
           <p className=" xl:max-w-6xl text-gray-500  max-w-sm xl:text-2xl   text-base text-center  xl:leading-[3rem] leading-7">
-            Adara roto est une entreprise spécialisée dans la vente de citernes
-            alimentaires en plastique , spécialement "Polyethylene", elle a fait
-            ses débuts officielement en 2014 grâce à la qualité exceptionnelle
-            de ses produits sarl adara roto est devenu le leader dans le domaine
-            de la production et de la vente des citernes en algérie
+          {t("adaraC")}
           </p>
         </div>
 
@@ -213,10 +209,16 @@ function Acceuil() {
         </div>
       </motion.div>
       {/* 3 couches */}
-      <div className="flex flex-wrap justify-around items-center lg:my-20 relative">
+      <motion.div
+        initial={{ x: -500, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1.3 }}
+        viewport={{ once: true }}
+        className="flex flex-wrap justify-around items-center lg:my-20 relative"
+      >
         <img
           src="/images/3couches.png"
-          alt=""
+          alt="3 couches citernes polytheline"
           className="xl:max-w-[30rem] lg:max-w-[25rem]"
         />
 
@@ -247,7 +249,7 @@ function Acceuil() {
             ne produit pas un nombre supérieur ou inferieur à ce nombre
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* temoignages clients */}
       <Temoignage />

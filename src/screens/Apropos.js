@@ -2,7 +2,7 @@ import React from 'react'
 
 function Apropos() {
   return (
-    <div>Apropos</div>
+    <div className='lg:pt-24'>Apropos</div>
   )
 }
 
