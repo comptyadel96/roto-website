@@ -6,21 +6,16 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/thumbs"
 
-function Temoignage({
-  nom = "boullif adel",
-  commentaire = " Produit excellent, trés satisfait de ma commande",
-  photo = "moi.jpg",
-}) {
+function Temoignage() {
   return (
-    <div className=" flex flex-col items-center w-full my-20 bg-[#f3f3f3] lg:py-10">
-      <p className="font-semibold lg:text-2xl ml-5">
+    <div className=" flex flex-col items-center w-full my-20 bg-[#edf2f4]   lg:py-10">
+      <p className="font-semibold lg:text-3xl ml-5  ">
         Temoignages de nos clients
       </p>
       <Swiper
         spaceBetween={50}
         slidesPerView={3}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSwiper={(swiper) => console.log(swiper)}
         modules={[Navigation, Autoplay]}
         navigation
         loop
@@ -34,70 +29,96 @@ function Temoignage({
         }}
       >
         <SwiperSlide>
-          <div className="flex flex-col items-center lg:my-10">
+          <div className="flex flex-col items-center lg:my-20 bg-white shadow-lg lg:px-4 lg:py-3 rounded-xl">
             <img
-              src={`/images/${photo}`}
+              src={`/images/moi.jpg`}
               alt="profil pic"
-              className="h-24 w-24 rounded-full self-center"
+              className="h-24 w-24 mb-2 rounded-full self-center"
             />
-            <h3 className="font-semibold text "> {nom} </h3>
-            <img src="/images/etoiles-5.png" alt="" className="h-6" />
-            <p className="max-w-xs text-center">{commentaire}</p>
+            <h3 className="font-semibold mb-2 text text-gray-800 ">
+              Boullif adel{" "}
+            </h3>
+            <img src="/images/etoiles-5.png" alt="" className="h-6 mb-2" />
+            <p className="max-w-xs text-center text-gray-500">
+              {" "}
+              trés satisfait de ma commande, trés bon acceuil et le service
+              commercial est top !{" "}
+            </p>
           </div>
         </SwiperSlide>
         {/* 2 */}
         <SwiperSlide>
-          <div className="flex flex-col items-center lg:my-10">
+          <div className="flex flex-col items-center lg:my-20 bg-white shadow-lg lg:px-4 lg:py-3 rounded-xl">
             <img
-              src={`/images/${photo}`}
+              src={`/images/medLab.jpg`}
               alt="profil pic"
-              className="h-24 w-24 rounded-full self-center"
+              className="h-24 w-24 mb-2 rounded-full self-center"
             />
-            <h3 className="font-semibold text "> {nom} </h3>
-            <img src="/images/etoiles-5.png" alt="" className="h-6" />
-            <p className="max-w-xs text-center">{commentaire}</p>
+            <h3 className="font-semibold mb-2 text text-gray-800 ">med lab </h3>
+            <img src="/images/etoiles-5.png" alt="" className="h-6 mb-2" />
+            <p className="max-w-xs text-center text-gray-500">
+              {" "}
+              j'étais vraiment étonné de la qualité des citernes, bonne
+              continuation{" "}
+            </p>
           </div>
         </SwiperSlide>
         {/* 3 */}
         <SwiperSlide>
-          <div className="flex flex-col items-center lg:my-10">
+          <div className="flex flex-col items-center lg:my-20 bg-white shadow-lg lg:px-4 lg:py-3 rounded-xl">
             <img
-              src={`/images/${photo}`}
+              src={`/images/lily.jpg`}
               alt="profil pic"
-              className="h-24 w-24 rounded-full self-center"
+              className="h-24 w-24 mb-2 rounded-full self-center"
             />
-            <h3 className="font-semibold text "> {nom} </h3>
-            <img src="/images/etoiles-5.png" alt="" className="h-6" />
-            <p className="max-w-xs text-center">{commentaire}</p>
+            <h3 className="font-semibold mb-2 text text-gray-800 ">
+              Lily bel{" "}
+            </h3>
+            <img src="/images/etoiles-5.png" alt="" className="h-6 mb-2" />
+            <p className="max-w-xs text-center text-gray-500">
+              excellent produit vraiment rien à dire trés solide{" "}
+            </p>
           </div>
         </SwiperSlide>
         {/* 4 */}
         <SwiperSlide>
-          <div className="flex flex-col items-center lg:my-10">
+          <div className="flex flex-col items-center lg:my-20 bg-white shadow-lg lg:px-4 lg:py-3 rounded-xl">
             <img
-              src={`/images/${photo}`}
+              src={`/images/abdelali.jpg`}
               alt="profil pic"
-              className="h-24 w-24 rounded-full self-center"
+              className="h-24 w-24 mb-2 rounded-full self-center"
             />
-            <h3 className="font-semibold text "> {nom} </h3>
-            <img src="/images/etoiles-5.png" alt="" className="h-6" />
-            <p className="max-w-xs text-center">{commentaire}</p>
+            <h3 className="font-semibold mb-2 text text-gray-800 ">
+              abdelali abd{" "}
+            </h3>
+            <img src="/images/etoiles-5.png" alt="" className="h-6 mb-2" />
+            <p className="max-w-md text-center text-gray-500">
+              Mon premier achat etait en 2015 chez vous et depuis je suis devenu
+              votre client et je le resterai toujours merci adara
+            </p>
           </div>
         </SwiperSlide>
         {/* 5 */}
         <SwiperSlide>
-          <div className="flex flex-col items-center lg:my-10">
+          <div className="flex flex-col items-center lg:my-20 bg-white shadow-lg lg:px-4 lg:py-3 rounded-xl">
             <img
-              src={`/images/${photo}`}
+              src={`/images/moussa.jpg`}
               alt="profil pic"
-              className="h-24 w-24 rounded-full self-center"
+              className="h-24 w-24 mb-2 rounded-full self-center"
             />
-            <h3 className="font-semibold text "> {nom} </h3>
-            <img src="/images/etoiles-5.png" alt="" className="h-6" />
-            <p className="max-w-xs text-center">{commentaire}</p>
+            <h3 className="font-semibold mb-2 text text-gray-800 ">
+              Moussa laadjoui
+            </h3>
+            <img src="/images/etoiles-5.png" alt="" className="h-6 mb-2" />
+            <p className="max-w-md text-center text-gray-500">
+              équipe serieuse et trés dynamique, le service aprés-vente est
+              excellent, les prix sont aussi trés raisonnables
+            </p>
           </div>
         </SwiperSlide>
       </Swiper>
+      <p className="text-xs text-gray-500">sarl adara roto</p>
+      <p className="text-xs text-gray-500"> {new Date().getFullYear()} </p>
     </div>
   )
 }
