@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useLayoutEffect, useEffect } from "react"
 import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { FiMail, FiPhone } from "react-icons/fi"
@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next"
 import axios from "axios"
 import { Formik, Field, Form, ErrorMessage } from "formik"
 import * as Yup from "yup"
-
+import { useLocation } from "react-router-dom"
 function ContactUs() {
   const { t } = useTranslation()
 
@@ -52,8 +52,6 @@ function ContactUs() {
     message: "",
   }
 
-  // send email
-
   const recaptchaError = () => {
     toast.warn(
       "Une erreur est servenu , veuillez vérifier votre connexion internet et réessayer",
@@ -64,6 +62,8 @@ function ContactUs() {
       }
     )
   }
+  let location = useLocation()
+
   return (
     <div className="w-full justify-around flex items-center flex-wrap  lg:mb-5 h-full relative overflow-visible lg:py-10 bg-gray-50">
       <ToastContainer />
@@ -89,20 +89,21 @@ function ContactUs() {
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
+        onReset={() => window.location.reload(true)}
         onSubmit={async (values) => {
-          console.log(values)
-          let token = captchaRef.current.getValue()
-          captchaRef.current.reset()
-          var data = {
-            service_id: "service_jfyl0rb",
-            template_id: "template_zesiuut",
-            user_id: "nUPAVDtMin_HDW4gH",
-            template_params: {
-              ...values,
-              "g-recaptcha-response": token,
-            },
-          }
           try {
+            let token = captchaRef.current.getValue()
+            captchaRef.current.reset()
+            var data = {
+              service_id: "service_jfyl0rb",
+              template_id: "template_zesiuut",
+              user_id: "nUPAVDtMin_HDW4gH",
+              template_params: {
+                ...values,
+                "g-recaptcha-response": token,
+              },
+            }
+
             await axios.post(
               "https://api.emailjs.com/api/v1.0/email/send",
               data
@@ -114,9 +115,14 @@ function ContactUs() {
               pauseOnHover: true,
             })
           } catch (error) {
+            // console.log(
+            //   error.message.slice(0, 41) ===
+            //     "reCAPTCHA client element has been removed"
+            // )
             if (
+              error.response &&
               error.response.data ===
-              "reCAPTCHA: The g-recaptcha-response parameter not found"
+                "reCAPTCHA: The g-recaptcha-response parameter not found"
             ) {
               toast.warn(
                 "Veuillez cocher la case je ne suis pas un robot afin de pouvoir envoyer le message",
@@ -126,20 +132,16 @@ function ContactUs() {
                   draggable: false,
                 }
               )
-            } else {
-              toast.warn(
-                "Une erreur est servenu , veuillez vérifier votre connexion internet et réessayer",
-                {
-                  position: toast.POSITION.BOTTOM_CENTER,
-                  hideProgressBar: true,
-                  draggable: false,
-                }
-              )
+            } else if (
+              error.message.slice(0, 41) ===
+              "reCAPTCHA client element has been removed"
+            ) {
+              return window.location.reload(false)
             }
           }
         }}
       >
-        {({ handleSubmit }) => (
+        {({ handleSubmit, handleReset }) => (
           <Form className="flex flex-col items-center h-full lg:w-[50%] ">
             <p className="lg:text-3xl  pb-3 border-b-2 border-[#2d4c78] text-[#2d4c78]  max-w-fit mx-auto mt-10 mb-5">
               {t("contactUs")}
@@ -195,8 +197,9 @@ function ContactUs() {
             />
             <ReCAPTCHA
               sitekey={process.env.REACT_APP_RE_CAPTCHA}
-              onErrored={recaptchaError}
+              onErrored={handleReset}
               ref={captchaRef}
+              onExpired={() => captchaRef.current.reset()}
             />
             <button
               type="submit"
