@@ -44,15 +44,15 @@ function Navbar() {
           className="text-xl cursor-pointer pb-2 "
         >
           {i18n.language === "fr" ? (
-            <p className="inline-flex items-center">
+            <span className="inline-flex items-center">
               <img src="/images/algerie.png" alt="" className="h-4 mr-2" />{" "}
               arabe
-            </p>
+            </span>
           ) : (
-            <p className="inline-flex items-center">
+            <span className="inline-flex items-center">
               <img src="/images/france.png" alt="" className="h-4 mr-2" />{" "}
               français{" "}
-            </p>
+            </span>
           )}
         </p>
       </div>

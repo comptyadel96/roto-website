@@ -5,13 +5,12 @@ import { Navigation, Autoplay } from "swiper"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/thumbs"
-
+import { useTranslation } from "react-i18next"
 function Temoignage() {
+  const { t } = useTranslation()
   return (
     <div className=" flex flex-col items-center w-full my-20 bg-[#edf2f4]   lg:py-10">
-      <p className="font-semibold lg:text-3xl ml-5  ">
-        Temoignages de nos clients
-      </p>
+      <p className="font-semibold lg:text-3xl ml-5  ">{t("Temoignage")}</p>
       <Swiper
         spaceBetween={50}
         slidesPerView={3}

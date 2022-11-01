@@ -56,15 +56,15 @@ function Acceuil() {
           </div>
 
           <TypeEffect />
-          <p className=" text-xl text-[#2d4c78] lg:mt-5 mt-2 lg:max-w-[100%] max-w-md text-center ">
+          <p className=" text-xl lg:max-w-md text-[#2d4c78] lg:mt-5 mt-2  max-w-md text-center ">
             {t("headerSub")}
           </p>
           <div className="flex items-center  flex-wrap lg:self-end self-center lg:mt-[20%] mt-4">
             <button className=" lg:text-2xl mr-2 border-none px-3 py-1 rounded-md  bg-gray-700 hover:bg-black  text-white ">
-             {t("découvrer")}
+              {t("découvrer")}
             </button>
             <button className=" hvr-bounce-to-top lg:text-2xl border-none px-3 py-1 rounded-md    ">
-             {t("commander")}
+              {t("commander")}
             </button>
           </div>
         </div>
@@ -82,7 +82,7 @@ function Acceuil() {
             {t("adaraCquoi")}
           </h1>
           <p className=" xl:max-w-6xl text-gray-500  max-w-sm xl:text-2xl   text-base text-center  xl:leading-[3rem] leading-7">
-          {t("adaraC")}
+            {t("adaraC")}
           </p>
         </div>
 
@@ -90,7 +90,7 @@ function Acceuil() {
         <motion.div
           initial={{ x: 500, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 1 }}
+          transition={{ delay: 1, duration: 1 }}
           viewport={{ once: true }}
           className="flex items-center flex-wrap mt-10 w-full justify-around lg:mt-24"
         >
@@ -101,10 +101,11 @@ function Acceuil() {
               className="object-cover lg:max-h-[10rem] "
             />
             <div className=" flex flex-col items-center lg:ml-3">
-              <p className="font-semibold text-xl lg:mb-3 ">C'est costaud !</p>
+              <p className="font-semibold text-xl lg:mb-3 ">
+                {t("C'estCostaud")}{" "}
+              </p>
               <p className="max-w-[290px] text-center text-gray-500">
-                Nos citérnes se démarquent par leur qualité mais aussi pour leur
-                robustesse
+                {t("cCostaudSub")}
               </p>
             </div>
           </div>
@@ -115,9 +116,11 @@ function Acceuil() {
               className="object-cover lg:max-h-[12rem] "
             />
             <div className=" flex flex-col items-center lg:ml-3">
-              <p className="font-semibold text-xl lg:mb-3 ">Qualité/prix </p>
+              <p className="font-semibold text-xl lg:mb-3 ">
+                {t("qualitéPrix")}{" "}
+              </p>
               <p className="max-w-[270px] text-center text-gray-500">
-                Plus besoin de vous ruiner pour avoir une citerne haute gamme
+                {t("qualitéPrixSub")}
               </p>
             </div>
           </div>
@@ -128,15 +131,17 @@ function Acceuil() {
               className="object-cover lg:max-h-[10rem] "
             />
             <div className=" flex flex-col items-center lg:ml-3">
-              <p className="font-semibold text-xl lg:mb-3 ">Satisfaction</p>
+              <p className="font-semibold text-xl lg:mb-3 ">
+                {t("satisfaction")}{" "}
+              </p>
               <p className="max-w-[270px] text-center text-gray-500">
-                La quantité c'est bien, la qualitée c'est encore mieux
+                {t("subSatisfaction")}
               </p>
             </div>
           </div>
         </motion.div>
         <p className="lg:mt-10 lg:text-xl text-[#2d4c78] font-bold">
-          Et bien plus encore...
+          {t("bienPlus")}
         </p>
       </div>
 
@@ -150,7 +155,7 @@ function Acceuil() {
         className="flex flex-col lg:my-10 relative overflow-hidden lg:py-24 bg-[#edf2f4] "
       >
         <h3 className=" text-center lg:text-4xl lg:mb-16 font-semibold ">
-          Types de citernes
+          {t("TypesCiternes")}
         </h3>
         {/* <div className="absolute lg:block hidden bottom-0 bg-[#a4e2ff]  h-[150%] w-[120%] z-10 water-wave" /> */}
 
@@ -162,11 +167,10 @@ function Acceuil() {
               className="lg:max-h-[9rem] xl:max-h-[13rem] absolute lg:top-24 xl:-top-24 -left-20 object-cover citerne"
             />
             <p className="lg:ml-auto font-semibold lg:mt-2 lg:text-2xl mb-5 ">
-              Horizontale petit format
+              {t("hpf")}
             </p>
             <p className="text-center  xl:max-w-[70%] lg:max-w-[75%]  ml-auto">
-              idéal pour une utilisation dans votre domicile <br />
-              capacité de 700 à 3000 litres
+              {t("hpfSub")}
             </p>
             <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
               à partir de 18.500 Da
@@ -179,11 +183,10 @@ function Acceuil() {
               className="lg:max-h-[13rem] absolute -top-14 xl:-left-12 lg:-left-16 object-cover citerne2"
             />
             <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl mb-5">
-              Vertical grand format
+              {t("vgf")}
             </p>
             <p className="text-center  xl:max-w-[70%] lg:max-w-[74%] ml-auto">
-              Spécialement conçu pour une utilisation fréquente et a grande
-              quantité capacité de 5000 à 30.000 litres
+              {t("vgfSub")}
             </p>
             <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
               à partir de 81.000 Da
@@ -196,11 +199,10 @@ function Acceuil() {
               className="lg:max-h-[17rem] absolute -top-14 -left-5 object-cover citerne"
             />
             <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl mb-5">
-              Vertical petit format
+              {t("vpf")}
             </p>
             <p className="text-center xl:max-w-[70%] lg:max-w-[80%] ml-auto">
-              Citerne polyvalente avec différente capacitée de stockage, de 500
-              à 2000 litres
+              {t("vpfSub")}
             </p>
             <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
               à partir de 14.500 Da
@@ -224,29 +226,27 @@ function Acceuil() {
 
         <div className="flex flex-col items-center lg:ml-5 relative content">
           <h2 className="font-bold lg:text-5xl absolute lg:right-[25%]  lg:-top-16">
-            3 Couches
+            {t("3couches")}
           </h2>
           <h2 className="font-bold lg:text-5xl absolute lg:right-[25%]  lg:-top-16 ">
-            3 Couches
+            {t("3couches")}
           </h2>
           <ul className="list-disc">
             <li className="max-w-2xl text-center lg:text-xl text-[#2d4c78] lg:mb-5">
-              la premiére couche est de couleur grise avec la capacité de
-              stockage et le logo de l'entreprise
+              {t("c1")}
             </li>
             <li className="max-w-2xl text-center lg:text-xl text-[#2d4c78] mb-5">
-              la 2iéme couche est de couleur noir, elle empêche les rayons
-              ultraviolets de pénétrer la citerne
+              {t("c2")}
             </li>
             <li className="max-w-2xl text-center lg:text-xl text-[#2d4c78]">
-              la 3iéme couche est de couleur blanche, elle permet de garder la
-              pureté du liquide et de vérifier l'état de votre eau
+              {t("c3")}
             </li>
           </ul>
           <p className="border border-[#2d4c78] rounded-lg lg:px-4 lg:py-2 lg:mt-10 lg:max-w-xl text-gray-500">
-            <span className="font-semibold text-[#2d4c78]">Important: </span>
-            Toutes nos citernes ont seulement un nombre de 3 couches, adara roto
-            ne produit pas un nombre supérieur ou inferieur à ce nombre
+            <span className="font-semibold text-[#2d4c78]">
+              {t("important")}{' '}
+            </span>
+            {t("importantText")}
           </p>
         </div>
       </motion.div>

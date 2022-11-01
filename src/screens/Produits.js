@@ -2,7 +2,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 function Produits() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   return (
     <div className="lg:pt-24 w-full h-full">
       <div className="flex flex-col items-center">
