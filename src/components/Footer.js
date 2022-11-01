@@ -3,7 +3,7 @@ import { MdOutlineFacebook } from "react-icons/md"
 import { AiOutlineTwitter, AiFillInstagram } from "react-icons/ai"
 function Footer() {
   return (
-    <div className="mt-auto w-full bg-gray-100 flex flex-wrap items-center justify-evenly py-6 lg:px-3 lemonPara">
+    <div className="mt-auto w-full bg-gray-100 flex flex-wrap items-center justify-evenly py-6 lg:px-3 ">
       {/* liens */}
       <div className="flex flex-col items-start text-gray-800">
         <p className="text-black lg:text-lg">Raccourcis</p>

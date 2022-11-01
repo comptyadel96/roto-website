@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next"
 import axios from "axios"
 import { Formik, Field, Form, ErrorMessage } from "formik"
 import * as Yup from "yup"
-import { useLocation } from "react-router-dom"
+
 function ContactUs() {
   const { t } = useTranslation()
 
@@ -51,18 +51,6 @@ function ContactUs() {
     subject: "",
     message: "",
   }
-
-  const recaptchaError = () => {
-    toast.warn(
-      "Une erreur est servenu , veuillez vérifier votre connexion internet et réessayer",
-      {
-        position: toast.POSITION.BOTTOM_CENTER,
-        hideProgressBar: true,
-        draggable: false,
-      }
-    )
-  }
-  let location = useLocation()
 
   return (
     <div className="w-full justify-around flex items-center flex-wrap  lg:mb-5 h-full relative overflow-visible lg:py-10 bg-gray-50">
