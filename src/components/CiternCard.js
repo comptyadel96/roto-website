@@ -9,11 +9,11 @@ function CiternCard({
   diametre,
 }) {
   return (
-    <div className="flex flex-col items-center lg:px-4 lg:py-2 bg-white shadow-md border rounded-xl">
+    <div className="flex flex-col items-center  lg:px-4 lg:py-2 bg-white shadow-md border rounded-xl overflow-visible">
       <img
         src={`/images/${photo}`}
         alt="citérne algérie"
-        className="max-h-[14rem]"
+        className="max-h-[14rem] hover:scale-[1.1] transition-all duration-500"
       />
       <p className="lg:text-2xl font-semibold bg-gray-200 lg:px-3 mt-2 rounded-lg "> {capacité} litres </p>
 
