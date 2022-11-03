@@ -14,14 +14,14 @@ function Produits() {
   return (
     <div className="lg:pt-[73px] w-full h-full">
       {/* head section */}
-      <div className="flex  items-center relative lg:mb-24 bg-gray-50">
+      <div className="flex  items-center relative lg:mb-24 bg-white">
         <svg
           className="lg:block hidden absolute top-0 left-0"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
         >
           <path
-            fill="#edf2f4"
+            fill="#1d3557"
             fillOpacity="1"
             d="M0,224L48,192C96,160,192,96,288,101.3C384,107,480,181,576,202.7C672,224,768,192,864,176C960,160,1056,160,1152,154.7C1248,149,1344,139,1392,133.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
           ></path>
@@ -32,7 +32,7 @@ function Produits() {
           alt=""
         />
         <div className="flex flex-col lg:self-start lg:mt-10  z-40 lg:ml-3  xl:w-full ">
-          <p className="lg:text-6xl font-semibold ">jusqu'a 30.000 litres</p>
+          <p className="lg:text-6xl font-semibold text-white ">jusqu'a 30.000 litres</p>
 
           <div className="flex flex-col lg:mt-[20%] xl:mt-[20%] text-right lg:mr-10  xl:ml-auto xl:mr-16 xl:pl-5 xl:pt-3 xl:pr-2 bg-white border border-black rounded-xl">
             <p className="xl:self-center xl:text-5xl xl:font-semibold">
@@ -40,7 +40,7 @@ function Produits() {
             </p>
             <div className="flex lg:flex-col xl:flex-row xl:items-center xl:my-7 lg:my-4">
               <p className="lg:text-5xl font-semibold inline-flex items-center">
-                <span className="lg:block hidden h-7 w-7 mr-3 rounded-full bg-[#edf2f4]" />
+                <span className="lg:block hidden h-4 w-4 mr-3 rounded-full bg-[#1d3557]" />
                 Matiére:
               </p>
               <p className="lg:text-3xl xl:text-4xl xl:ml-3 text-gray-500 ">
@@ -50,7 +50,7 @@ function Produits() {
 
             <div className="flex lg:flex-col xl:flex-row xl:items-center xl:my-7 lg:my-4">
               <p className="lg:text-5xl  font-semibold inline-flex items-center">
-                <span className="lg:block hidden h-7 w-7 mr-3 rounded-full bg-[#edf2f4]" />{" "}
+                <span className="lg:block hidden h-4 w-4 mr-3 rounded-full bg-[#1d3557]" />
                 Nb de couche:
               </p>
               <p className="lg:text-3xl xl:text-4xl xl:ml-3 text-gray-500 ">
@@ -66,7 +66,7 @@ function Produits() {
         Horizontale
       </p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
-        <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#edf2f4] -z-10" />
+        <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#1d3557] -z-10" />
         <Swiper
           spaceBetween={50}
           slidesPerView={WINDOW_Width <= 769 ? 2 : WINDOW_Width >= 1280 ? 5 : 2}
@@ -131,7 +131,7 @@ function Produits() {
         Verticale petit volume
       </p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
-        <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#1098F7] -z-10" />
+        <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#1d3557] -z-10" />
         <Swiper
           spaceBetween={50}
           slidesPerView={WINDOW_Width <= 768 ? 2 : WINDOW_Width >= 1280 ? 5 : 2}
@@ -198,7 +198,7 @@ function Produits() {
         Verticale moyen volume
       </p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
-        <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#5E239D] -z-10" />
+        <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#1d3557] -z-10" />
         <Swiper
           spaceBetween={50}
           slidesPerView={WINDOW_Width <= 768 ? 2 : WINDOW_Width >= 1280 ? 5 : 2}
@@ -264,7 +264,7 @@ function Produits() {
       {/* Grand volume */}
       <p id="vertical-g" className="text-center lg:text-4xl lg:mb-8 lg:mt-24">Grand volume</p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
-        <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#F61067] -z-10" />
+        <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#1d3557] -z-10" />
         <Swiper
           spaceBetween={50}
           slidesPerView={WINDOW_Width <= 768 ? 2 : WINDOW_Width >= 1280 ? 5 : 2}
