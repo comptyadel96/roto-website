@@ -62,7 +62,9 @@ function Produits() {
       </div>
       {/* types de citérnes */}
       {/* horizontal */}
-      <p className="text-center lg:text-4xl lg:mb-8">Horizontale</p>
+      <p id="horizontal" className="text-center lg:text-4xl lg:mb-8">
+        Horizontale
+      </p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
         <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#edf2f4] -z-10" />
         <Swiper
@@ -125,7 +127,7 @@ function Produits() {
         </Swiper>
       </div>
       {/* vertical */}
-      <p className="text-center lg:text-4xl lg:mb-8 lg:mt-24">
+      <p id="vertical-p" className="text-center lg:text-4xl lg:mb-8 lg:mt-24">
         Verticale petit volume
       </p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
@@ -259,10 +261,8 @@ function Produits() {
         </Swiper>
       </div>
 
-       {/* Grand volume */}
-       <p className="text-center lg:text-4xl lg:mb-8 lg:mt-24">
-        Grand volume
-      </p>
+      {/* Grand volume */}
+      <p id="vertical-g" className="text-center lg:text-4xl lg:mb-8 lg:mt-24">Grand volume</p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
         <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#F61067] -z-10" />
         <Swiper

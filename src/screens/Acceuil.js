@@ -8,9 +8,18 @@ import ContactUs from "../utils/ContactUs"
 import Temoignage from "../screens/Temoignage"
 import { motion } from "framer-motion"
 import TypeEffect from "../components/TypeEffect"
-
+import { useNavigate } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 function Acceuil() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+  // scroll with offset
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset
+    const yOffset = -130
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" })
+  }
+
   return (
     <div className=" h-full flex flex-col bg-white overflow-hidden lg:pt-20">
       {/* company infos */}
@@ -60,7 +69,10 @@ function Acceuil() {
             {t("headerSub")}
           </p>
           <div className="flex items-center  flex-wrap lg:self-end self-center lg:mt-[20%] mt-4">
-            <button className=" lg:text-2xl mr-2 border-none px-3 py-1 rounded-md  bg-gray-700 hover:bg-black  text-white ">
+            <button
+              onClick={() => navigate("/produits")}
+              className=" lg:text-2xl mr-2 border-none px-3 py-1 rounded-md  bg-gray-700 hover:bg-black  text-white "
+            >
               {t("découvrer")}
             </button>
             <button className=" hvr-bounce-to-top lg:text-2xl border-none px-3 py-1 rounded-md    ">
@@ -172,9 +184,15 @@ function Acceuil() {
             <p className="text-center  xl:max-w-[70%] lg:max-w-[75%]  ml-auto">
               {t("hpfSub")}
             </p>
-            <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
-              à partir de 18.500 Da
-            </p>
+            <button className="ml-auto border-2 border-[#2d4c78] lg:px-2 rounded-xl text-[#2d4c78] hover:bg-[#2d4c78] transition-all duration-500 hover:text-white mt-auto font-semibold text-xl">
+              <HashLink
+                smooth
+                to="/produits/#horizontal"
+                scroll={(el) => scrollWithOffset(el)}
+              >
+                Voir le produit
+              </HashLink>
+            </button>
           </div>
           <div className="lg:px-5 lg:py-2 flex lg:mx-20 bg-white shadow-md lg:w-[34%] xl:w-1/3  h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative border">
             <img
@@ -188,9 +206,15 @@ function Acceuil() {
             <p className="text-center  xl:max-w-[70%] lg:max-w-[74%] ml-auto">
               {t("vgfSub")}
             </p>
-            <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
-              à partir de 81.000 Da
-            </p>
+            <button className="ml-auto border-2 border-[#2d4c78] lg:px-2 rounded-xl text-[#2d4c78] hover:bg-[#2d4c78] transition-all duration-500 hover:text-white mt-auto font-semibold text-xl">
+              <HashLink
+                to="/produits/#vertical-g"
+                smooth
+                scroll={(el) => scrollWithOffset(el)}
+              >
+                Voir le produit{" "}
+              </HashLink>
+            </button>
           </div>
           <div className="lg:px-5 lg:py-2 flex lg:mx-20 bg-white shadow-md mt-20 lg:w-[34%] xl:w-1/3  h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative border ">
             <img
@@ -204,9 +228,15 @@ function Acceuil() {
             <p className="text-center xl:max-w-[70%] lg:max-w-[80%] ml-auto">
               {t("vpfSub")}
             </p>
-            <p className="ml-auto text-[#2d4c78] mt-auto font-semibold text-xl">
-              à partir de 14.500 Da
-            </p>
+            <button className="ml-auto border-2 border-[#2d4c78] lg:px-2 rounded-xl text-[#2d4c78] hover:bg-[#2d4c78] transition-all duration-500 hover:text-white mt-auto font-semibold text-xl">
+              <HashLink
+                to="/produits/#vertical-p"
+                smooth
+                scroll={(el) => scrollWithOffset(el)}
+              >
+                Voir le produit
+              </HashLink>
+            </button>
           </div>
         </div>
       </motion.div>
@@ -244,7 +274,7 @@ function Acceuil() {
           </ul>
           <p className="border border-[#2d4c78] rounded-lg lg:px-4 lg:py-2 lg:mt-10 lg:max-w-xl text-gray-500">
             <span className="font-semibold text-[#2d4c78]">
-              {t("important")}{' '}
+              {t("important")}{" "}
             </span>
             {t("importantText")}
           </p>
