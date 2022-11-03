@@ -75,7 +75,7 @@ function Contact() {
           </div>
         </div>
         {/* form */}
-        <div className="">
+        <div>
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
