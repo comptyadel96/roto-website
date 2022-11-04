@@ -103,10 +103,6 @@ function ContactUs() {
               pauseOnHover: true,
             })
           } catch (error) {
-            // console.log(
-            //   error.message.slice(0, 41) ===
-            //     "reCAPTCHA client element has been removed"
-            // )
             if (
               error.response &&
               error.response.data ===
@@ -191,8 +187,11 @@ function ContactUs() {
             />
             <button
               type="submit"
-              onClick={handleSubmit}
               className="transition-all duration-700 px-3 py-2 lg:text-xl text-[#2d4c78] font-semibold  bg-white cursor-pointer hover:bg-[#2d4c78] rounded-lg hover:text-white border-[#2d4c78] border-2 max-w-fit  my-4"
+              onClick={() => {
+                handleSubmit()
+                handleReset()
+              }}
             >
               {t("envoyer")}
             </button>
