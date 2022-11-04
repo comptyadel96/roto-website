@@ -8,11 +8,39 @@ import ContactUs from "../utils/ContactUs"
 import Temoignage from "../screens/Temoignage"
 import { motion } from "framer-motion"
 import TypeEffect from "../components/TypeEffect"
-
+import { MessengerChat } from "react-messenger-chat-plugin"
 function Acceuil() {
   const { t } = useTranslation()
   return (
     <div className=" h-full flex flex-col bg-white overflow-hidden lg:pt-20">
+      <MessengerChat
+        pageId="104349362317038"
+        language="sv_SE"
+        themeColor={"#000000"}
+        bottomSpacing={300}
+        loggedInGreeting="loggedInGreeting"
+        loggedOutGreeting="loggedOutGreeting"
+        greetingDialogDisplay={"show"}
+        debugMode={true}
+        onMessengerShow={() => {
+          console.log("onMessengerShow")
+        }}
+        onMessengerHide={() => {
+          console.log("onMessengerHide")
+        }}
+        onMessengerDialogShow={() => {
+          console.log("onMessengerDialogShow")
+        }}
+        onMessengerDialogHide={() => {
+          console.log("onMessengerDialogHide")
+        }}
+        onMessengerMounted={() => {
+          console.log("onMessengerMounted")
+        }}
+        onMessengerLoad={() => {
+          console.log("onMessengerLoad")
+        }}
+      />
       {/* company infos */}
       <div className="lg:flex hidden items-center  w-full bg-[#1d3557] py-1  px-5">
         <div className="flex items-center mx-3 max-w-fit">
@@ -244,7 +272,7 @@ function Acceuil() {
           </ul>
           <p className="border border-[#2d4c78] rounded-lg lg:px-4 lg:py-2 lg:mt-10 lg:max-w-xl text-gray-500">
             <span className="font-semibold text-[#2d4c78]">
-              {t("important")}{' '}
+              {t("important")}{" "}
             </span>
             {t("importantText")}
           </p>
