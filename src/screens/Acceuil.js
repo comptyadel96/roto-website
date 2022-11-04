@@ -28,9 +28,9 @@ function Acceuil() {
     <div className=" h-full flex flex-col bg-white overflow-hidden lg:pt-20">
       <MessengerChat
         pageId="104349362317038"
-        language="sv_SE"
-        themeColor={"#000000"}
-        bottomSpacing={300}
+        language="fr_FR"
+        themeColor={"#44BEC7"}
+        bottomSpacing={50}
         loggedInGreeting="loggedInGreeting"
         loggedOutGreeting="loggedOutGreeting"
         greetingDialogDisplay={"show"}
