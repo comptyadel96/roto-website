@@ -9,8 +9,6 @@ import Temoignage from "../screens/Temoignage"
 import { motion } from "framer-motion"
 import TypeEffect from "../components/TypeEffect"
 
-import { MessengerChat } from "react-messenger-chat-plugin"
-
 import { useNavigate } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 
@@ -25,35 +23,7 @@ function Acceuil() {
   }
 
   return (
-    <div className=" h-full flex flex-col bg-white overflow-hidden lg:pt-20">
-      <MessengerChat
-        pageId="104349362317038"
-        language="fr_FR"
-        themeColor={"#44BEC7"}
-        bottomSpacing={10}
-        loggedInGreeting="Salutations! comment pouvons-nous vous aider ?"
-        loggedOutGreeting="Laissez-nous un message, on vous contactera au plus tot"
-        greetingDialogDisplay={"show"}
-        debugMode={true}
-        onMessengerShow={() => {
-          console.log("onMessengerShow")
-        }}
-        onMessengerHide={() => {
-          console.log("onMessengerHide")
-        }}
-        onMessengerDialogShow={() => {
-          console.log("onMessengerDialogShow")
-        }}
-        onMessengerDialogHide={() => {
-          console.log("onMessengerDialogHide")
-        }}
-        onMessengerMounted={() => {
-          console.log("onMessengerMounted")
-        }}
-        onMessengerLoad={() => {
-          console.log("onMessengerLoad")
-        }}
-      />
+    <div className="h-full flex flex-col bg-white overflow-hidden lg:pt-20">
       {/* company infos */}
       <div className="lg:flex hidden items-center  w-full bg-[#1d3557] py-1  px-5">
         <div className="flex items-center mx-3 max-w-fit">
