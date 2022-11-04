@@ -30,9 +30,9 @@ function Acceuil() {
         pageId="104349362317038"
         language="fr_FR"
         themeColor={"#44BEC7"}
-        bottomSpacing={50}
-        loggedInGreeting="loggedInGreeting"
-        loggedOutGreeting="loggedOutGreeting"
+        bottomSpacing={10}
+        loggedInGreeting="Salutations! comment pouvons-nous vous aider ?"
+        loggedOutGreeting="Laissez-nous un message, on vous contactera au plus tot"
         greetingDialogDisplay={"show"}
         debugMode={true}
         onMessengerShow={() => {
