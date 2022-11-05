@@ -77,7 +77,7 @@ function ContactUs() {
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onReset={() => window.location.reload(true)}
+        // onReset={() => window.location.reload(true)}
         onSubmit={async (values) => {
           try {
             let token = captchaRef.current.getValue()
@@ -120,12 +120,12 @@ function ContactUs() {
               error.message.slice(0, 41) ===
               "reCAPTCHA client element has been removed"
             ) {
-              return window.location.reload(false)
+              return window.location.reload(true)
             }
           }
         }}
       >
-        {({ handleSubmit, handleReset }) => (
+        {({ handleReset }) => (
           <Form className="flex flex-col items-center h-full lg:w-[50%] ">
             <p className="lg:text-3xl  pb-3 border-b-2 border-[#2d4c78] text-[#2d4c78]  max-w-fit mx-auto mt-10 mb-5">
               {t("contactUs")}
@@ -188,10 +188,9 @@ function ContactUs() {
             <button
               type="submit"
               className="transition-all duration-700 px-3 py-2 lg:text-xl text-[#2d4c78] font-semibold  bg-white cursor-pointer hover:bg-[#2d4c78] rounded-lg hover:text-white border-[#2d4c78] border-2 max-w-fit  my-4"
-              onClick={() => {
-                handleSubmit()
-                handleReset()
-              }}
+              // onClick={() => {
+              //   handleReset()
+              // }}
             >
               {t("envoyer")}
             </button>

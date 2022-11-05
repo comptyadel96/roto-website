@@ -50,6 +50,7 @@ function Contact() {
   }
   return (
     <div className="lg:pt-24 w-full h-full flex flex-col">
+      <ToastContainer />
       <div className="flex flex-wrap items-center justify-around lg:mb-20">
         {/* illustration and contact infos */}
         <div className="flex flex-col  bg-[#edf2f4] lg:p-10 lg:w-[40%] ">
@@ -79,7 +80,7 @@ function Contact() {
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
-            onReset={() => window.location.reload(true)}
+            // onReset={() => window.location.reload(true)}
             onSubmit={async (values) => {
               try {
                 let token = captchaRef.current.getValue()
@@ -105,10 +106,10 @@ function Contact() {
                   pauseOnHover: true,
                 })
               } catch (error) {
-                // console.log(
-                //   error.message.slice(0, 41) ===
-                //     "reCAPTCHA client element has been removed"
-                // )
+                console.log(
+                  error.response.data ===
+                    "reCAPTCHA: The g-recaptcha-response parameter not found"
+                )
                 if (
                   error.response &&
                   error.response.data ===
@@ -126,12 +127,12 @@ function Contact() {
                   error.message.slice(0, 41) ===
                   "reCAPTCHA client element has been removed"
                 ) {
-                  return window.location.reload(false)
+                  return window.location.reload(true)
                 }
               }
             }}
           >
-            {({ handleSubmit, handleReset }) => (
+            {({  handleReset }) => (
               <Form className="flex flex-col items-center h-full lg:w-[100%]  ">
                 <p className="text-gray-500">{t("contactUsSub")}</p>
                 <Field
@@ -191,11 +192,7 @@ function Contact() {
                   onExpired={() => captchaRef.current.reset()}
                 />
                 <button
-                  type="submit"
-                  onClick={() => {
-                    handleSubmit()
-                    handleReset()
-                  }}
+                 type="submit"
                   className="transition-all duration-700 px-3 py-2 lg:text-xl text-[#2d4c78] font-semibold  bg-white cursor-pointer hover:bg-[#2d4c78] rounded-lg hover:text-white border-[#2d4c78] border-2 max-w-fit  my-4"
                 >
                   {t("envoyer")}
