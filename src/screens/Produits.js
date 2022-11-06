@@ -7,7 +7,8 @@ import { Navigation, Autoplay } from "swiper"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/thumbs"
-
+import { AiFillSafetyCertificate } from "react-icons/ai"
+import { GiImperialCrown } from "react-icons/gi"
 function Produits() {
   const { t } = useTranslation()
   const WINDOW_Width = window.innerWidth
@@ -32,31 +33,30 @@ function Produits() {
           alt=""
         />
         <div className="flex flex-col lg:self-start lg:mt-10  z-40 lg:ml-3  xl:w-full ">
-          <p className="lg:text-6xl font-semibold text-white ">jusqu'a 30.000 litres</p>
+          <p className="lg:text-6xl font-semibold text-white ">
+            jusqu'a 30.000 litres
+          </p>
 
-          <div className="flex flex-col lg:mt-[20%] xl:mt-[20%] text-right lg:mr-10  xl:ml-auto xl:mr-16 xl:pl-5 xl:pt-3 xl:pr-2 bg-white border border-black rounded-xl">
-            <p className="xl:self-center xl:text-5xl xl:font-semibold">
-              Citernes Adara
+          <div className="flex flex-col lg:mt-[20%] lg:mr-10  xl:ml-auto xl:mr-16 xl:pl-5 xl:p-3 bg-white border border-black rounded-xl">
+            <p className="xl:text-5xl text-center inline-flex items-center lg:mb-3">
+              <GiImperialCrown className="lg:mr-4" /> Adara roto
             </p>
-            <div className="flex lg:flex-col xl:flex-row xl:items-center xl:my-7 lg:my-4">
-              <p className="lg:text-5xl font-semibold inline-flex items-center">
-                <span className="lg:block hidden h-4 w-4 mr-3 rounded-full bg-[#1d3557]" />
-                Matiére:
-              </p>
-              <p className="lg:text-3xl xl:text-4xl xl:ml-3 text-gray-500 ">
-                Polyethylene
-              </p>
-            </div>
-
-            <div className="flex lg:flex-col xl:flex-row xl:items-center xl:my-7 lg:my-4">
-              <p className="lg:text-5xl  font-semibold inline-flex items-center">
-                <span className="lg:block hidden h-4 w-4 mr-3 rounded-full bg-[#1d3557]" />
-                Nb de couche:
-              </p>
-              <p className="lg:text-3xl xl:text-4xl xl:ml-3 text-gray-500 ">
-                3 couches
-              </p>
-            </div>
+            <p className="text-gray-600 xl:max-w-[575px] xl:text-3xl">
+              Des citernes haute gamme faite avec amour pour votre plus grand
+              confort et adapter à tous vos besoins
+            </p>
+          </div>
+          <div className="inline-flex items-center justify-evenly flex-wrap lg:mt-20 xl:ml-auto xl:mr-16">
+            <p className="inline-flex items-center lg:mt-3 xl:px-4 xl:py-1 border-2 rounded-lg border-[#1d3557] text-[#1d3557] lg:mr-5">
+              <AiFillSafetyCertificate className="mr-1" /> Matiére: Polyethylene
+            </p>
+            <p className="inline-flex items-center lg:mt-3 xl:px-4 xl:py-1 border-2 rounded-lg border-[#1d3557] text-[#1d3557] lg:mr-5">
+              <AiFillSafetyCertificate className="mr-1" /> nombre de couches: 3
+            </p>
+            <p className="inline-flex items-center lg:mt-3 xl:px-4 xl:py-1 border-2 rounded-lg border-[#1d3557] text-[#1d3557]">
+              <AiFillSafetyCertificate className="mr-1" /> Liquides: eau et
+              acide
+            </p>
           </div>
         </div>
       </div>
@@ -262,7 +262,9 @@ function Produits() {
       </div>
 
       {/* Grand volume */}
-      <p id="vertical-g" className="text-center lg:text-4xl lg:mb-8 lg:mt-24">Grand volume</p>
+      <p id="vertical-g" className="text-center lg:text-4xl lg:mb-8 lg:mt-24">
+        Grand volume
+      </p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
         <div className="absolute -bottom-[20%] w-full h-1/2 bg-[#1d3557] -z-10" />
         <Swiper
