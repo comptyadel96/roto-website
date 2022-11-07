@@ -53,7 +53,7 @@ function ContactUs() {
   }
 
   return (
-    <div className="w-full justify-around flex items-center flex-wrap  lg:mb-5 h-full relative overflow-visible lg:py-10 bg-gray-50">
+    <div className="w-full justify-around flex items-center flex-wrap  lg:mb-24 h-full relative overflow-visible lg:py-10 bg-gray-50">
       <ToastContainer />
       {/* infos */}
       <div className="flex flex-col justify-around border border-[#2d4c78] rounded-xl lg:py-5 lg:px-4">

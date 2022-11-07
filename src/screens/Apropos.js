@@ -65,20 +65,24 @@ function Apropos() {
           />
         </div>
       </div>
-      <div className="flex flex-col w-full bg-[#1d3557] lg:pb-24 lg:py-10">
-        <p className="lg:text-3xl text-center text-white">
+      <div className="flex flex-col w-full bg-[#1d3557] lg:pb-16 lg:py-10 lg:mb-20">
+        <p className="lg:text-3xl text-center text-white font-semibold">
           Se déplacer vers notre emplacement
         </p>
         {/* google maps */}
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.331100942432!2d2.816552515602864!3d36.57023818830957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128f0b1bbab614c9%3A0xbe107c8812ea8125!2sAdara%20sarl!5e0!3m2!1sfr!2sdz!4v1666011523280!5m2!1sfr!2sdz"
           style={{ border: 0 }}
-          className="mx-auto my-5 lg:w-1/3 lg:h-[20rem] border-none outline-none"
+          className=" my-5 lg:w-full lg:h-[25rem] border-none outline-none"
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="google maps adara roto vente citerne algérie"
         />
+        <div className="flex flex-col items-center text-white self-center">
+          <p className="lg:text-xl mr-3"> Horaires d'ouverture:</p>
+          <p>Du dimanche au jeudi de 8 heure à 16:30 </p>
+        </div>
       </div>
     </div>
   )
