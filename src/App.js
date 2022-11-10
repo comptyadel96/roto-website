@@ -8,8 +8,12 @@ import Apropos from "./screens/Apropos"
 import Contact from "./screens/Contact"
 import Produits from "./screens/Produits"
 import NotFound from "./screens/NotFound"
-import { MessengerChat } from "react-messenger-chat-plugin"
+import { useEffect } from "react"
+import { MessengerChat, showMessenger } from "react-messenger-chat-plugin"
 function App() {
+  useEffect(()=>{
+    showMessenger(true)
+  },[])
   return (
     <BrowserRouter>
       <Navbar />
