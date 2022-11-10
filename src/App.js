@@ -26,7 +26,7 @@ function App() {
           loggedInGreeting="Salutations! comment pouvons-nous vous aider ?"
           loggedOutGreeting="Laissez-nous un message, on vous contactera au plus tot"
           greetingDialogDisplay={"show"}
-          debugMode={true}
+          // debugMode={true}
           onMessengerShow={() => {
             console.log("onMessengerShow")
           }}

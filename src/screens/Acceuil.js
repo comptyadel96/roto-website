@@ -178,7 +178,7 @@ function Acceuil() {
             <img
               src="/images/horizontal.png"
               alt=""
-              className="lg:max-h-[9rem] xl:max-h-[13rem] absolute lg:top-24 xl:-top-24 -left-20 object-cover citerne"
+              className="lg:max-h-[9rem] xl:max-h-[13rem] absolute lg:top-24 xl:-top-24 lg:-left-[83px] xl:-left-[75px] object-cover citerne"
             />
             <p className="lg:ml-auto font-semibold lg:mt-2 lg:text-2xl mb-5 ">
               {t("hpf")}
@@ -200,7 +200,7 @@ function Acceuil() {
             <img
               src="/images/vertical-xl.png"
               alt=""
-              className="lg:max-h-[13rem] absolute -top-14 xl:-left-12 lg:-left-16 object-cover citerne2"
+              className="lg:max-h-[13rem] absolute -top-14 xl:-left-12 lg:-left-[80px] object-cover citerne2"
             />
             <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl mb-5">
               {t("vgf")}
