@@ -18,6 +18,7 @@ function App() {
         language="fr_FR"
         themeColor={"#44BEC7"}
         bottomSpacing={10}
+        className="border-none outline-none overflow-hidden "
         loggedInGreeting="Salutations! comment pouvons-nous vous aider ?"
         loggedOutGreeting="Laissez-nous un message, on vous contactera au plus tot"
         greetingDialogDisplay={"show"}
