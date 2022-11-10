@@ -13,35 +13,37 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <MessengerChat
-        pageId="104349362317038"
-        language="fr_FR"
-        themeColor={"#44BEC7"}
-        bottomSpacing={10}
-        className="border-none outline-none overflow-hidden "
-        loggedInGreeting="Salutations! comment pouvons-nous vous aider ?"
-        loggedOutGreeting="Laissez-nous un message, on vous contactera au plus tot"
-        greetingDialogDisplay={"show"}
-        debugMode={true}
-        onMessengerShow={() => {
-          console.log("onMessengerShow")
-        }}
-        onMessengerHide={() => {
-          console.log("onMessengerHide")
-        }}
-        onMessengerDialogShow={() => {
-          console.log("onMessengerDialogShow")
-        }}
-        onMessengerDialogHide={() => {
-          console.log("onMessengerDialogHide")
-        }}
-        onMessengerMounted={() => {
-          console.log("onMessengerMounted")
-        }}
-        onMessengerLoad={() => {
-          console.log("onMessengerLoad")
-        }}
-      />
+      <div className="border-none outline-none overflow-hidden ">
+        <MessengerChat
+          pageId="104349362317038"
+          language="fr_FR"
+          themeColor={"#44BEC7"}
+          bottomSpacing={10}
+          loggedInGreeting="Salutations! comment pouvons-nous vous aider ?"
+          loggedOutGreeting="Laissez-nous un message, on vous contactera au plus tot"
+          greetingDialogDisplay={"show"}
+          debugMode={true}
+          onMessengerShow={() => {
+            console.log("onMessengerShow")
+          }}
+          onMessengerHide={() => {
+            console.log("onMessengerHide")
+          }}
+          onMessengerDialogShow={() => {
+            console.log("onMessengerDialogShow")
+          }}
+          onMessengerDialogHide={() => {
+            console.log("onMessengerDialogHide")
+          }}
+          onMessengerMounted={() => {
+            console.log("onMessengerMounted")
+          }}
+          onMessengerLoad={() => {
+            console.log("onMessengerLoad")
+          }}
+        />
+      </div>
+
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route element={<Acceuil />} path="/" />
