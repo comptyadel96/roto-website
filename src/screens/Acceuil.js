@@ -250,8 +250,8 @@ function Acceuil() {
       </motion.div>
       {/* 3 couches */}
       <motion.div
-        initial={{  opacity: 0 }}
-        whileInView={{  opacity: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1.5 }}
         viewport={{ once: true }}
         className="flex flex-wrap justify-around items-center lg:my-20 relative lg:px-0 px-5"

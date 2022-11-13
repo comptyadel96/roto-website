@@ -171,7 +171,7 @@ function ContactUs() {
             />
             <Field
               placeholder={t("message")}
-              className=" w-full lg:min-h-[8rem] mb-3 border bg-transparent border-[#2d4c78] placeholder:text-black lg:my-2  py-3 px-5 rounded-lg h-1/2 block outline-none "
+              className=" lg:w-full w-[90%] min-h-[8rem]  my-3 border bg-transparent border-[#2d4c78] placeholder:text-black lg:my-2  py-3 px-5 rounded-lg h-1/2 block outline-none "
               name="message"
               as="textarea"
             />
