@@ -76,7 +76,7 @@ function Contact() {
           </div>
         </div>
         {/* form */}
-        <div>
+        <div className="lg:min-w-[40%]">
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}

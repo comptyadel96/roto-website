@@ -7,14 +7,16 @@ import "swiper/css/pagination"
 import "swiper/css/thumbs"
 import { useTranslation } from "react-i18next"
 function Temoignage() {
+  const screenWidth = window.innerWidth
   const { t } = useTranslation()
   return (
-    <div className=" flex flex-col items-center w-full my-20 bg-[#edf2f4]   lg:py-10">
-      <p className="font-semibold lg:text-3xl ml-5  ">{t("Temoignage")}</p>
+    <div className=" flex flex-col items-center w-full my-20 bg-[#edf2f4] lg:py-10 py-5">
+      <p className="font-semibold lg:text-3xl text-2xl lg:ml-5 lg:mb-0 mb-3  ">
+        {t("Temoignage")}
+      </p>
       <Swiper
         spaceBetween={50}
-        slidesPerView={3}
-        // onSwiper={(swiper) => console.log(swiper)}
+        slidesPerView={screenWidth > 780 ? 3 : 1}
         modules={[Navigation, Autoplay]}
         navigation
         loop
@@ -28,7 +30,7 @@ function Temoignage() {
         }}
       >
         <SwiperSlide>
-          <div className="flex flex-col items-center lg:my-20 bg-white shadow-lg lg:px-4 lg:py-3 rounded-xl">
+          <div className="flex flex-col items-center lg:my-20 lg:bg-white lg:shadow-lg lg:px-4 lg:py-3 py-2 rounded-xl">
             <img
               src={`/images/moi.jpg`}
               alt="profil pic"
@@ -47,7 +49,7 @@ function Temoignage() {
         </SwiperSlide>
         {/* 2 */}
         <SwiperSlide>
-          <div className="flex flex-col items-center lg:my-20 bg-white shadow-lg lg:px-4 lg:py-3 rounded-xl">
+          <div className="flex flex-col items-center lg:my-20 lg:bg-white lg:shadow-lg lg:px-4 lg:py-3 py-2 rounded-xl">
             <img
               src={`/images/medLab.jpg`}
               alt="profil pic"
@@ -64,7 +66,7 @@ function Temoignage() {
         </SwiperSlide>
         {/* 3 */}
         <SwiperSlide>
-          <div className="flex flex-col items-center lg:my-20 bg-white shadow-lg lg:px-4 lg:py-3 rounded-xl">
+          <div className="flex flex-col items-center lg:my-20 lg:bg-white lg:shadow-lg lg:px-4 lg:py-3 py-2 rounded-xl">
             <img
               src={`/images/lily.jpg`}
               alt="profil pic"
@@ -81,7 +83,7 @@ function Temoignage() {
         </SwiperSlide>
         {/* 4 */}
         <SwiperSlide>
-          <div className="flex flex-col items-center lg:my-20 bg-white shadow-lg lg:px-4 lg:py-3 rounded-xl">
+          <div className="flex flex-col items-center lg:my-20 lg:bg-white lg:shadow-lg lg:px-4 lg:py-3 py-2 rounded-xl">
             <img
               src={`/images/abdelali.jpg`}
               alt="profil pic"
@@ -99,7 +101,7 @@ function Temoignage() {
         </SwiperSlide>
         {/* 5 */}
         <SwiperSlide>
-          <div className="flex flex-col items-center lg:my-20 bg-white shadow-lg lg:px-4 lg:py-3 rounded-xl">
+          <div className="flex flex-col items-center lg:my-20 lg:bg-white lg:shadow-lg lg:px-4 lg:py-3 py-2 rounded-xl">
             <img
               src={`/images/moussa.jpg`}
               alt="profil pic"

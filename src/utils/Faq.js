@@ -22,12 +22,12 @@ function Faq({
       onClick={toggleRef}
       className="my-3 lg:mx-5 overflow-hidden cursor-pointer flex flex-col items-center lg:max-w-md relative bg-white lg:px-3 lg:rounded-xl border border-gray-600 "
     >
-      <div className="inline-flex items-center">
+      <div className="flex items-center w-full">
         <p className="lg:text-2xl"> {question} </p>
         {!isOpen ? (
-          <IoChevronDownSharp className="lg:text-xl text-gray-400 lg:ml-4 lg:mt-1" />
+          <IoChevronDownSharp className="lg:text-xl text-gray-400 ml-auto lg:mt-1" />
         ) : (
-          <IoChevronUpSharp className="lg:text-xl text-gray-400 lg:ml-4 lg:mt-1" />
+          <IoChevronUpSharp className="lg:text-xl text-gray-400 ml-auto lg:mt-1" />
         )}
       </div>
 

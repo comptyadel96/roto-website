@@ -45,7 +45,7 @@ function Apropos() {
         <p className="text-center lg:text-4xl font-semibold mb-7">
           Questions fréquemment posées
         </p>
-        <div className="flex lg:flex-row flex-col flex-wrap items-center justify-evenly">
+        <div className="flex  flex-col  items-center justify-evenly">
           <Faq />
           <Faq
             question="Adara fait-elle la livraison ?"
@@ -57,7 +57,7 @@ function Apropos() {
           />
           <Faq
             question="seulement du 3 couches ?"
-            reponse="oui, adara roto ne produit que des citérnes 3 couches, vous ne pouvez donc pas faire une commande de plus ou de moins que 3 couches"
+            reponse="oui, adara roto ne produit que des citérnes 3 couches, vous ne pouvez donc pas faire une commande de plus ou moins que 3 couches"
           />
           <Faq
             question="Type de liquide supporter ?"

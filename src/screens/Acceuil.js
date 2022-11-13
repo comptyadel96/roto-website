@@ -23,9 +23,9 @@ function Acceuil() {
   }
 
   return (
-    <div className="h-full flex flex-col bg-white overflow-hidden lg:pt-20">
+    <div className="h-full flex flex-col bg-white overflow-hidden lg:pt-20 overflow-x-hidden">
       {/* company infos */}
-      <div className="lg:flex hidden items-center  w-full bg-[#1d3557] py-1  px-5">
+      <div className="lg:flex hidden items-center  w-full bg-[#1d3557] py-1  lg:px-5">
         <div className="flex items-center mx-3 max-w-fit">
           <FiMail className="text-white lg:text-4xl text-xl ml-2" />
           <p className=" text-lg text-white ml-1">roto@adarasarl.com</p>
@@ -48,7 +48,13 @@ function Acceuil() {
           >
             <MdOutlineFacebook className="text-white text-3xl mx-6 cursor-pointer" />{" "}
           </a>
-          <ImInstagram className="text-white text-3xl mx-6 cursor-pointer " />
+          <a
+            href="https://www.instagram.com/adara_roto/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ImInstagram className="text-white text-3xl mx-6 cursor-pointer " />
+          </a>
         </div>
       </div>
 
@@ -90,9 +96,9 @@ function Acceuil() {
       </div>
       {/* qui somme nous */}
 
-      <div className="flex flex-col  items-center lg:py-20 z-10 ">
-        <div className="flex flex-col items-center relative">
-          <h1 className="xl:text-5xl text-3xl font-semibold pb-2 max-w-fit lg:mb-3 ">
+      <div className="flex flex-col  items-center lg:py-20 py-10 z-10 lg:mb-0">
+        <div className="flex flex-col items-center relative lg:px-0 px-4">
+          <h1 className="xl:text-5xl text-2xl font-semibold pb-2 max-w-fit lg:mb-3 ">
             {t("adaraCquoi")}
           </h1>
           <p className=" xl:max-w-6xl text-gray-500  max-w-sm xl:text-2xl   text-base text-center  xl:leading-[3rem] leading-7">
@@ -102,17 +108,17 @@ function Acceuil() {
 
         {/* illustration */}
         <motion.div
-          initial={{ x: 500, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 2.5 }}
           viewport={{ once: true }}
           className="flex items-center flex-wrap mt-10 w-full justify-around lg:mt-24"
         >
-          <div className="shadow-md border lg:my-2 px-4 mx-4 flex lg:flex-row lg:flex-wrap flex-col items-center py-3 rounded-xl">
+          <div className="lg:shadow-md lg:border my-2 px-4 mx-4 flex lg:flex-row lg:flex-wrap flex-col items-center py-3 rounded-xl">
             <img
               src="/images/strong-citern.png"
               alt="citern adara"
-              className="object-cover lg:max-h-[10rem] "
+              className="object-cover lg:max-h-[10rem] max-h-[8rem] "
             />
             <div className=" flex flex-col items-center lg:ml-3">
               <p className="font-semibold text-xl lg:mb-3 ">
@@ -123,11 +129,11 @@ function Acceuil() {
               </p>
             </div>
           </div>
-          <div className="shadow-md border lg:my-2 px-4 mx-4 flex lg:flex-row lg:flex-wrap flex-col items-center pb-3 rounded-xl">
+          <div className="lg:shadow-md lg:border  px-4 mx-4 flex lg:flex-row lg:flex-wrap flex-col items-center pb-3 rounded-xl">
             <img
               src="/images/monnaie-citern.png"
               alt="citern adara"
-              className="object-cover lg:max-h-[12rem] "
+              className="object-cover lg:max-h-[12rem] max-h-[10rem] "
             />
             <div className=" flex flex-col items-center lg:ml-3">
               <p className="font-semibold text-xl lg:mb-3 ">
@@ -138,11 +144,11 @@ function Acceuil() {
               </p>
             </div>
           </div>
-          <div className="shadow-md border lg:pt-2 lg:my-2 px-4 mx-4 flex lg:flex-row lg:flex-wrap flex-col items-center pb-3 rounded-xl">
+          <div className="lg:shadow-md lg:border lg:pt-2 my-2 px-4 mx-4 flex lg:flex-row lg:flex-wrap flex-col items-center pb-3 rounded-xl">
             <img
               src="/images/star-citern.png"
               alt="citern adara"
-              className="object-cover lg:max-h-[10rem] "
+              className="object-cover lg:max-h-[10rem] max-h-[8rem] lg:mt-0 mt-2"
             />
             <div className=" flex flex-col items-center lg:ml-3">
               <p className="font-semibold text-xl lg:mb-3 ">
@@ -161,32 +167,32 @@ function Acceuil() {
 
       {/* type de citerne */}
       <motion.div
-        initial={{ x: 500, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.8, duration: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.8, duration: 1.5 }}
         viewport={{ once: true }}
         id="grad"
-        className="flex flex-col lg:my-10 relative overflow-hidden lg:py-24 bg-[#edf2f4] "
+        className="flex flex-col my-10 relative overflow-hidden lg:py-24 py-10 bg-[#edf2f4] "
       >
-        <h3 className=" text-center lg:text-4xl lg:mb-16 font-semibold ">
+        <h3 className=" text-center lg:text-4xl text-3xl lg:mb-16 font-semibold ">
           {t("TypesCiternes")}
         </h3>
         {/* <div className="absolute lg:block hidden bottom-0 bg-[#a4e2ff]  h-[150%] w-[120%] z-10 water-wave" /> */}
 
         <div className="flex items-center flex-wrap my-5 justify-evenly  w-full ">
-          <div className="lg:pr-5 pl-20 lg:py-2 flex lg:mx-20 bg-white shadow-md lg:w-[34%] xl:w-1/3   h-[13rem] flex-col  rounded-2xl overflow-visible lg:p-4 relative border ">
+          <div className="lg:pr-5 lg:pl-20 lg:py-2 py-5 lg:my-0 my-10 flex lg:mx-20 lg:bg-white lg:shadow-md lg:w-[34%] xl:w-1/3   lg:h-[13rem] flex-col items-center  rounded-2xl overflow-visible lg:p-4 relative lg:border ">
             <img
               src="/images/horizontal.png"
               alt=""
-              className="lg:max-h-[9rem] xl:max-h-[13rem] absolute lg:top-24 xl:-top-24 -left-20 object-cover citerne"
+              className="lg:max-h-[9rem] xl:max-h-[13rem] lg:max-w-max max-w-[60%]  lg:absolute lg:top-24 xl:-top-24 lg:-left-24 xl:-left-16 object-cover citerne"
             />
-            <p className="lg:ml-auto font-semibold lg:mt-2 lg:text-2xl mb-5 ">
+            <p className="xl:ml-auto font-semibold mt-2  text-2xl lg:mb-5 mb-2  ">
               {t("hpf")}
             </p>
             <p className="text-center  xl:max-w-[70%] lg:max-w-[75%]  ml-auto">
               {t("hpfSub")}
             </p>
-            <button className="ml-auto border-2 border-[#2d4c78] lg:px-2 rounded-xl text-[#2d4c78] hover:bg-[#2d4c78] transition-all duration-500 hover:text-white mt-auto font-semibold text-xl">
+            <button className="lg:ml-auto border-2 max-w-fit mx-auto mt-4 border-[#2d4c78] px-2 rounded-xl text-[#2d4c78] hover:bg-[#2d4c78] transition-all duration-500 hover:text-white lg:mt-auto  font-semibold text-xl">
               <HashLink
                 smooth
                 to="/produits/#horizontal"
@@ -196,19 +202,19 @@ function Acceuil() {
               </HashLink>
             </button>
           </div>
-          <div className="lg:px-5 lg:py-2 flex lg:mx-20 bg-white shadow-md lg:w-[34%] xl:w-1/3  h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative border">
+          <div className="lg:px-5 lg:py-2 flex lg:mx-20 lg:bg-white lg:shadow-md lg:w-[34%] xl:w-1/3  lg:h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative lg:border">
             <img
               src="/images/vertical-xl.png"
               alt=""
-              className="lg:max-h-[13rem] absolute -top-14 xl:-left-12 lg:-left-16 object-cover citerne2"
+              className="lg:max-h-[13rem] max-h-[16rem] lg:absolute -top-14 xl:-left-12 lg:-left-16 object-cover citerne2"
             />
-            <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl mb-5">
+            <p className="lg:ml-auto font-semibold xl:mx-auto mt-2 text-2xl lg:mb-5 mb-2 ">
               {t("vgf")}
             </p>
             <p className="text-center  xl:max-w-[70%] lg:max-w-[74%] ml-auto">
               {t("vgfSub")}
             </p>
-            <button className="ml-auto border-2 border-[#2d4c78] lg:px-2 rounded-xl text-[#2d4c78] hover:bg-[#2d4c78] transition-all duration-500 hover:text-white mt-auto font-semibold text-xl">
+            <button className="lg:ml-auto border-2 border-[#2d4c78] px-2 rounded-xl text-[#2d4c78] hover:bg-[#2d4c78] transition-all duration-500 hover:text-white lg:mt-auto lg:mb-0 mb-3 mt-3  font-semibold text-xl">
               <HashLink
                 to="/produits/#vertical-g"
                 smooth
@@ -218,19 +224,19 @@ function Acceuil() {
               </HashLink>
             </button>
           </div>
-          <div className="lg:px-5 lg:py-2 flex lg:mx-20 bg-white shadow-md mt-20 lg:w-[34%] xl:w-1/3  h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative border ">
+          <div className="lg:px-5 lg:py-2 flex lg:mx-20 lg:bg-white lg:shadow-md mt-20 lg:w-[34%] xl:w-1/3  lg:h-[13rem] flex-col items-center rounded-2xl overflow-visible lg:p-4 relative lg:border ">
             <img
               src="/images/vertical-s.png"
               alt=""
-              className="lg:max-h-[17rem] absolute -top-14 -left-5 object-cover citerne"
+              className="lg:max-h-[17rem] max-h-[15rem] lg:absolute -top-14 -left-5 object-cover citerne"
             />
-            <p className="lg:ml-auto font-semibold xl:mx-auto lg:mt-2 lg:text-2xl mb-5">
+            <p className="lg:ml-auto font-semibold xl:mx-auto mt-2 text-2xl mb-5">
               {t("vpf")}
             </p>
             <p className="text-center xl:max-w-[70%] lg:max-w-[80%] ml-auto">
               {t("vpfSub")}
             </p>
-            <button className="ml-auto border-2 border-[#2d4c78] lg:px-2 rounded-xl text-[#2d4c78] hover:bg-[#2d4c78] transition-all duration-500 hover:text-white mt-auto font-semibold text-xl">
+            <button className="lg:ml-auto border-2 border-[#2d4c78] px-2 rounded-xl text-[#2d4c78] hover:bg-[#2d4c78] transition-all duration-500 hover:text-white lg:mt-auto lg:mb-0 mb-3 mt-3  font-semibold text-xl">
               <HashLink
                 to="/produits/#vertical-p"
                 smooth
@@ -244,11 +250,11 @@ function Acceuil() {
       </motion.div>
       {/* 3 couches */}
       <motion.div
-        initial={{ x: -500, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1.3 }}
+        initial={{  opacity: 0 }}
+        whileInView={{  opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1.5 }}
         viewport={{ once: true }}
-        className="flex flex-wrap justify-around items-center lg:my-20 relative"
+        className="flex flex-wrap justify-around items-center lg:my-20 relative lg:px-0 px-5"
       >
         <img
           src="/images/3couches.png"
@@ -256,11 +262,11 @@ function Acceuil() {
           className="xl:max-w-[30rem] lg:max-w-[25rem]"
         />
 
-        <div className="flex flex-col items-center lg:ml-5 relative content">
-          <h2 className="font-bold lg:text-5xl absolute lg:right-[25%]  lg:-top-16">
+        <div className="flex flex-col items-center lg:ml-5 lg:mt-0 mt-10 relative content">
+          <h2 className="font-bold lg:text-5xl text-3xl absolute lg:right-[25%]  lg:-top-16 -top-9">
             {t("3couches")}
           </h2>
-          <h2 className="font-bold lg:text-5xl absolute lg:right-[25%]  lg:-top-16 ">
+          <h2 className="font-bold lg:text-5xl text-3xl absolute lg:right-[25%]  lg:-top-16 -top-9">
             {t("3couches")}
           </h2>
           <ul className="list-disc">
@@ -274,7 +280,7 @@ function Acceuil() {
               {t("c3")}
             </li>
           </ul>
-          <p className="border border-[#2d4c78] rounded-lg lg:px-4 lg:py-2 lg:mt-10 lg:max-w-xl text-gray-500">
+          <p className="border border-[#2d4c78] rounded-lg lg:px-4 py-2 lg:mt-10 mt-6 text-center lg:max-w-xl text-gray-500">
             <span className="font-semibold text-[#2d4c78]">
               {t("important")}{" "}
             </span>

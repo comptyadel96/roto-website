@@ -56,18 +56,18 @@ function ContactUs() {
     <div className="w-full justify-around flex items-center flex-wrap  lg:mb-24 h-full relative overflow-visible lg:py-10 bg-gray-50">
       <ToastContainer />
       {/* infos */}
-      <div className="flex flex-col justify-around border border-[#2d4c78] rounded-xl lg:py-5 lg:px-4">
-        <p className="inline-flex items-center lg:my-2">
+      <div className="flex flex-col justify-around border border-[#2d4c78] rounded-xl lg:py-5 py-3 px-2 lg:px-4">
+        <p className="inline-flex items-center my-2">
           <FiMail className="mr-2 text-3xl" /> roto@adarasarl.com
         </p>
-        <p className="inline-flex items-center lg:my-2">
+        <p className="inline-flex items-center my-2">
           <FiPhone className="mr-2 text-3xl" />
           +213 560 97 52 64
         </p>
-        <p className="inline-flex items-center lg:my-2">
+        <p className="inline-flex items-center my-2">
           <ImLocation2 className="mr-2 text-3xl" /> {t("adresse")}
         </p>
-        <p className="inline-flex items-center lg:my-2">
+        <p className="inline-flex items-center my-2">
           <ImClock className="mr-2 text-3xl" />
           {t("horairesOuverture")} <br />
           {t("horairesOuvertureSub")}
@@ -127,10 +127,10 @@ function ContactUs() {
       >
         {({ handleReset }) => (
           <Form className="flex flex-col items-center h-full lg:w-[50%] ">
-            <p className="lg:text-3xl  pb-3 border-b-2 border-[#2d4c78] text-[#2d4c78]  max-w-fit mx-auto mt-10 mb-5">
+            <p className="lg:text-3xl text-xl lg:pb-3 pb-1 border-b-2 border-[#2d4c78] text-[#2d4c78]  max-w-fit mx-auto mt-10 mb-5">
               {t("contactUs")}
             </p>
-            <p className="text-gray-500">{t("contactUsSub")}</p>
+            <p className="text-gray-500 text-center">{t("contactUsSub")}</p>
             <Field
               className="py-2 px-4 border-b border-[#2d4c78] w-full placeholder:text-black bg-transparent outline-none my-2"
               type="text"
@@ -171,7 +171,7 @@ function ContactUs() {
             />
             <Field
               placeholder={t("message")}
-              className=" w-full lg:min-h-[8rem] border bg-transparent border-[#2d4c78] placeholder:text-black lg:my-2  py-3 px-5 rounded-lg h-1/2 block outline-none "
+              className=" w-full lg:min-h-[8rem] mb-3 border bg-transparent border-[#2d4c78] placeholder:text-black lg:my-2  py-3 px-5 rounded-lg h-1/2 block outline-none "
               name="message"
               as="textarea"
             />
