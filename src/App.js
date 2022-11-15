@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div className="border-none outline-none overflow-hidden ">
+      <div className="border-none outline-none ">
         <MessengerChat
           pageId="104349362317038"
           language="fr_FR"
