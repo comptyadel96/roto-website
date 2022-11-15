@@ -9,8 +9,8 @@ function Apropos() {
           alt=""
           className="lg:max-w-[50%] object-cover"
         />
-        <div className="flex flex-col max-w-[40%] xl:px-5 xl:py-2">
-          <p className="xl:text-4xl font-semibold">
+        <div className="flex flex-col lg:max-w-[40%] xl:px-5 px-2 xl:py-2">
+          <p className="xl:text-4xl text-2xl font-semibold">
             Historique de l'entreprise
           </p>
           <p className="lg:mt-5 lg:text-xl text-gray-600 leading-8">
@@ -18,7 +18,7 @@ function Apropos() {
             création de l'entreprise sarl adara (créer en l'an 2000), notre
             entreprise a commancer officiellement la vente de citérnes en 2015.{" "}
           </p>
-          <p className="xl:text-4xl font-semibold lg:mt-5">
+          <p className="xl:text-4xl text-2xl font-semibold lg:mt-5">
             Partout en algérie
           </p>
           <p className="lg:mt-5 lg:text-xl text-gray-600 leading-7">
@@ -26,7 +26,7 @@ function Apropos() {
             supérieur de nos citernes 3 couches conçus pour contenir eau et
             acide.
           </p>
-          <p className="xl:text-4xl font-semibold lg:mt-5">Polyvalence</p>
+          <p className="xl:text-4xl text-2xl font-semibold lg:mt-5">Polyvalence</p>
           <p className="lg:mt-5 lg:text-xl text-gray-600 leading-7">
             l'entreprise sarl adara, et spécialisé dans la vente de citernes
             mais aussi pour la vente de matériels de plomberie et de tuyauterie

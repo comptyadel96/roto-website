@@ -13,7 +13,7 @@ function Produits() {
   const { t } = useTranslation()
   const WINDOW_Width = window.innerWidth
   return (
-    <div className="lg:pt-[73px] w-full h-full">
+    <div className="lg:pt-[73px] pt-16 pb-16 w-full h-full">
       {/* head section */}
       <div className="flex  items-center lg:flex-nowrap flex-wrap relative lg:mb-24 bg-white">
         <svg

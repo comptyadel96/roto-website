@@ -23,7 +23,7 @@ function Acceuil() {
   }
 
   return (
-    <div className="h-full flex flex-col bg-white overflow-hidden lg:pt-20 overflow-x-hidden">
+    <div className="h-full flex flex-col bg-white overflow-hidden lg:pt-20 pt-10 overflow-x-hidden">
       {/* company infos */}
       <div className="lg:flex hidden items-center  w-full bg-[#1d3557] py-1  lg:px-5">
         <div className="flex items-center mx-3 max-w-fit">
@@ -198,7 +198,7 @@ function Acceuil() {
                 to="/produits/#horizontal"
                 scroll={(el) => scrollWithOffset(el)}
               >
-                Voir le produit
+                {t("voirProduit")}
               </HashLink>
             </button>
           </div>
@@ -220,7 +220,7 @@ function Acceuil() {
                 smooth
                 scroll={(el) => scrollWithOffset(el)}
               >
-                Voir le produit{" "}
+                {t("voirProduit")}{" "}
               </HashLink>
             </button>
           </div>
@@ -242,7 +242,7 @@ function Acceuil() {
                 smooth
                 scroll={(el) => scrollWithOffset(el)}
               >
-                Voir le produit
+                {t("voirProduit")}
               </HashLink>
             </button>
           </div>

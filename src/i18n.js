@@ -49,6 +49,7 @@ const resources = {
          "sujet":"موضوع *",
          "message":"رسالة*",
          "envoyer":"إرسال",
+         "voirProduit":"اكتشف المنتج"
 
 
     },
@@ -97,7 +98,7 @@ const resources = {
          "sujet":"Sujet*",
          "message":"Message*",
          "envoyer":"envoyer",
-
+          "voirProduit":"Voir le produit"
 
 
     },
