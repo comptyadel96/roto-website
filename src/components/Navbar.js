@@ -83,10 +83,10 @@ function Navbar() {
           ref={navRef}
           className="absolute transition-all duration-700 overflow-hidden mb-2 -bottom-[172px] max-h-0 w-full flex flex-col bg-white  px-2 text-lg items-center"
         >
-          <p>{t("acceuil")}</p>
-          <p> {t("produits")}</p>
-          <p>{t("Apropos")}</p>
-          <p>{t("contactez-nous")}</p>
+          <p onClick={()=>navigation("/")}>{t("acceuil")}</p>
+          <p onClick={()=>navigation("/Produits")}> {t("produits")}</p>
+          <p onClick={()=>navigation("/Apropos")}>{t("Apropos")}</p>
+          <p onClick={()=>navigation("/Contact")}>{t("contactez-nous")}</p>
           <p
             onClick={() => {
               i18n.changeLanguage(i18n.language === "fr" ? "ar" : "fr")
