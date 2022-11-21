@@ -1,9 +1,7 @@
 import React, { useRef, useState } from "react"
 import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
-function Faq({
-  question = "Les citernes sont ils assurées ?",
-  reponse = "oui, lors de votre achat vous bénéficerai d'une assurance de 6 mois",
-}) {
+function Faq({ question, reponse }) {
+  
   const [isOpen, setIsOpen] = useState(false)
   const resRef = useRef(null)
   const toggleRef = () => {

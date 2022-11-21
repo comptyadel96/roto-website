@@ -1,6 +1,8 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 import Faq from "../utils/Faq"
 function Apropos() {
+  const { t } = useTranslation()
   return (
     <div className="lg:pt-24">
       <div className="flex flex-wrap justify-around w-full">
@@ -11,63 +13,39 @@ function Apropos() {
         />
         <div className="flex flex-col lg:max-w-[40%] xl:px-5 px-2 xl:py-2">
           <p className="xl:text-4xl text-2xl font-semibold">
-            Historique de l'entreprise
+            {t("historique")}
           </p>
           <p className="lg:mt-5 lg:text-xl text-gray-600 leading-8">
-            l'entreprise "Adara roto" a été créer en 2014, soit 14 ans aprés la
-            création de l'entreprise sarl adara (créer en l'an 2000), notre
-            entreprise a commancer officiellement la vente de citérnes en 2015.{" "}
+            {t("subHistorique")}
           </p>
           <p className="xl:text-4xl text-2xl font-semibold lg:mt-5">
-            Partout en algérie
+            {t("partout")}
           </p>
           <p className="lg:mt-5 lg:text-xl text-gray-600 leading-7">
-            notre succée dans le domaine est principalement dû à la qualité
-            supérieur de nos citernes 3 couches conçus pour contenir eau et
-            acide.
+            {t("subPartout")}
           </p>
-          <p className="xl:text-4xl text-2xl font-semibold lg:mt-5">Polyvalence</p>
+          <p className="xl:text-4xl text-2xl font-semibold lg:mt-5">
+            {t("polyvalence")}
+          </p>
           <p className="lg:mt-5 lg:text-xl text-gray-600 leading-7">
-            l'entreprise sarl adara, et spécialisé dans la vente de citernes
-            mais aussi pour la vente de matériels de plomberie et de tuyauterie
-            PPRC (Polypropylène Random Copolymère). Son objectif est d’apporter
-            une contribution pour pallier l’insuffisance des ressources
-            hydriques en mettant sur le marché un nouveau type de produit
-            d’étanchéité garanti et qui, grâce à ses caractéristiques chimiques
-            et mécaniques, offre un double avantage par sa résistance aux
-            températures extrêmes et par une absence totale de réaction au
-            contact des agents corrosifs.
+            {t("subPolyvalence")}
           </p>
         </div>
       </div>
       {/* todo faq with background image and maps + image gallery */}
       <div className="w-full lg:mt-20 lg:py-24 lg:p-5 bg-gray-100 mb-20">
-        <p className="text-center lg:text-4xl font-semibold mb-7">
-          Questions fréquemment posées
-        </p>
+        <p className="text-center lg:text-4xl font-semibold mb-7">{t("faq")}</p>
         <div className="flex  flex-col  items-center justify-evenly">
-          <Faq />
-          <Faq
-            question="Adara fait-elle la livraison ?"
-            reponse="si vous faite une commande importante, un grand nombre de citernes ou une citerne de 30.000 litres, nous vous assurerons une livraison gratuite "
-          />
-          <Faq
-            question="Toute température ?"
-            reponse="absolument, nos citérnes supportent une température de plus de 60 degrés celsius ainsi qu'une temperature relativement basse "
-          />
-          <Faq
-            question="seulement du 3 couches ?"
-            reponse="oui, adara roto ne produit que des citérnes 3 couches, vous ne pouvez donc pas faire une commande de plus ou moins que 3 couches"
-          />
-          <Faq
-            question="Type de liquide supporter ?"
-            reponse="Notre usine produit des citérnes pour eau mais aussi pour les acides, avec les memes spécifications et les memes dimensions "
-          />
+          <Faq question={t("faq1")} reponse={t("faq1r")} />
+          <Faq question={t("faq2")} reponse={t("faq2r")} />
+          <Faq question={t("faq3")} reponse={t("faq3r")} />
+          <Faq question={t("faq4")} reponse={t("faq4r")} />
+          <Faq question={t("faq5")} reponse={t("faq5r")} />
         </div>
       </div>
       <div className="flex flex-col w-full bg-[#1d3557] lg:pb-16 lg:py-10 lg:mb-20">
         <p className="lg:text-3xl text-center text-white font-semibold">
-          Se déplacer vers notre emplacement
+          {t("seDeplacer")}
         </p>
         {/* google maps */}
         <iframe
@@ -80,8 +58,8 @@ function Apropos() {
           title="google maps adara roto vente citerne algérie"
         />
         <div className="flex flex-col items-center text-white self-center">
-          <p className="lg:text-xl mr-3"> Horaires d'ouverture:</p>
-          <p>Du dimanche au jeudi de 8 heure à 16:30 </p>
+          <p className="lg:text-xl mr-3">{t("houv")} </p>
+          <p>{t("subHouv")} </p>
         </div>
       </div>
     </div>
