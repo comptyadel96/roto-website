@@ -59,7 +59,7 @@ const resources = {
           "vpv":"حجم صغير عمودي",
            "vmv":"متوسط ​​الحجم العمودي",
            "gv":"حجم كبير",
-           "litres":"لترات",
+           "litres":"لتر",
            "dimensions":"أبعاد",
            "hauteur":"ارتفاع",
             "largeur":"عرض",
