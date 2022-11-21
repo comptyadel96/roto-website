@@ -11,9 +11,9 @@ import NotFound from "./screens/NotFound"
 import { useEffect } from "react"
 import { MessengerChat, showMessenger } from "react-messenger-chat-plugin"
 function App() {
-  useEffect(()=>{
+  useEffect(() => {
     showMessenger(true)
-  },[])
+  }, [])
   return (
     <BrowserRouter>
       <Navbar />

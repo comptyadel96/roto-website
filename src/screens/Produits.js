@@ -34,7 +34,7 @@ function Produits() {
         />
         <div className="flex flex-col lg:self-start lg:mt-10  z-40 lg:ml-3  xl:w-full ">
           <p className="lg:text-6xl font-semibold text-white ">
-            jusqu'a 30.000 litres
+            {t("jusqua30000")}
           </p>
 
           <div className="flex flex-col lg:mt-[20%] lg:mr-10  xl:ml-auto xl:mr-16 lg:my-0 my-5 xl:pl-5 lg:pl-3 p-3 bg-white lg:border lg:border-black rounded-xl">
@@ -42,28 +42,29 @@ function Produits() {
               <GiImperialCrown className="lg:mr-4" /> Adara roto
             </p>
             <p className="text-gray-600 xl:max-w-[575px] xl:text-3xl text-xl">
-              Des citernes haute gamme faite avec amour pour votre plus grand
-              confort et adapter à tous vos besoins
+              {t("produitSubDescription")}
             </p>
           </div>
           <div className="inline-flex items-center justify-evenly flex-wrap lg:mt-20 lg:mb-0 mb-5 xl:ml-auto xl:mr-16">
             <p className="inline-flex items-center lg:mx-0 mx-[2px] mt-3 xl:px-4 px-1 lg:px-1 py-1 border-2 rounded-lg border-[#1d3557] text-[#1d3557] lg:mr-5">
-              <AiFillSafetyCertificate className="mr-1" /> Matiére: Polyethylene
+              <AiFillSafetyCertificate className="mr-1" /> {t("produitAd1")}
             </p>
             <p className="inline-flex items-center lg:mx-0 mx-[2px] mt-3 xl:px-4 px-1 lg:px-1 py-1 border-2 rounded-lg border-[#1d3557] text-[#1d3557] lg:mr-5">
-              <AiFillSafetyCertificate className="mr-1" /> nombre de couches: 3
+              <AiFillSafetyCertificate className="mr-1" /> {t("produitAd2")}
             </p>
             <p className="inline-flex items-center lg:mx-0 mx-[2px] mt-3 xl:px-4 px-1 lg:px-1 py-1 border-2 rounded-lg border-[#1d3557] text-[#1d3557]">
-              <AiFillSafetyCertificate className="mr-1" /> Liquides: eau et
-              acide
+              <AiFillSafetyCertificate className="mr-1" /> {t("produitAd3")}
             </p>
           </div>
         </div>
       </div>
       {/* types de citérnes */}
       {/* horizontal */}
-      <p id="horizontal" className="text-center lg:text-4xl text-2xl lg:mb-8 mb-4 lg:10t-0 mt-4">
-        Horizontale
+      <p
+        id="horizontal"
+        className="text-center lg:text-4xl text-2xl lg:mb-8 mb-4 lg:10t-0 mt-4"
+      >
+        {t("horizontale")}
       </p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
         <div className="absolute lg:-bottom-[20%] -bottom-[0%] w-full h-1/2 bg-[#1d3557] -z-10" />
@@ -127,8 +128,11 @@ function Produits() {
         </Swiper>
       </div>
       {/* vertical */}
-      <p id="vertical-p" className="text-center lg:text-4xl text-2xl lg:mb-8 mb-4 lg:10t-0 mt-4 lg:mt-24">
-        Verticale petit volume
+      <p
+        id="vertical-p"
+        className="text-center lg:text-4xl text-2xl lg:mb-8 mb-4 lg:10t-0 mt-4 lg:mt-24"
+      >
+        {t("vpv")}
       </p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
         <div className="absolute lg:-bottom-[20%] -bottom-[0%] w-full h-1/2 bg-[#1d3557] -z-10" />
@@ -195,7 +199,7 @@ function Produits() {
       </div>
       {/* vertical lg */}
       <p className="text-center lg:text-4xl text-2xl lg:mb-8 mb-4  mt-4 lg:mt-24">
-        Verticale moyen volume
+        {t("vmv")}
       </p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
         <div className="absolute lg:-bottom-[20%] -bottom-[0%] w-full h-1/2 bg-[#1d3557] -z-10" />
@@ -262,8 +266,11 @@ function Produits() {
       </div>
 
       {/* Grand volume */}
-      <p id="vertical-g" className="text-center lg:text-4xl text-2xl lg:mb-8 mb-4 mt-10 lg:mt-24">
-        Grand volume
+      <p
+        id="vertical-g"
+        className="text-center lg:text-4xl text-2xl lg:mb-8 mb-4 mt-10 lg:mt-24"
+      >
+        {t("gv")}
       </p>
       <div className="flex items-center justify-around flex-wrap lg:my-10 relative w-full">
         <div className="absolute lg:-bottom-[20%] -bottom-[0%] w-full h-1/2 bg-[#1d3557] -z-10" />
